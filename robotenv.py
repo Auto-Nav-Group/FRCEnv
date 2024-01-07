@@ -55,6 +55,8 @@ class RobotVEnv:
         self.environment_ids = []
         self.environment_dim = 0
         self.robotid = 0
+        self.target = [0,0,0,0,0,0,0,1,0,0]
+        self.max_mes = math.sqrt(self.basis.size.width**2+ self.basis.size.height**2)
 
     def step(self, action):
         target = False
