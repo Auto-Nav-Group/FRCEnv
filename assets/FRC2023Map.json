@@ -1,0 +1,93 @@
+[
+  {
+    "sizex": 15,
+    "sizey": 7,
+    "displayedImgPath": null,
+    "robotWidth": 1,
+    "robotHeight": 1
+  },
+  [
+    [
+      {
+        "name": "N/A",
+        "width": 0.82848835,
+        "height": 0.001744186,
+        "rotationangle": 0,
+        "locationx": 0.08546512,
+        "locationy": 0.48139533
+      },
+      {
+        "name": "N/A",
+        "width": 0.9994186,
+        "height": 0.001744186,
+        "rotationangle": 0,
+        "locationx": 0.00058139535,
+        "locationy": 0
+      },
+      {
+        "name": "N/A",
+        "width": 1.7616279,
+        "height": 2.2587209,
+        "rotationangle": 0,
+        "locationx": 2.642442,
+        "locationy": 3.65407
+      },
+      {
+        "name": "N/A",
+        "width": 1.7790698,
+        "height": 2.2238374,
+        "rotationangle": 0,
+        "locationx": 10.578488,
+        "locationy": 3.6715117
+      },
+      {
+        "name": "N/A",
+        "width": 1.9796512,
+        "height": 0.36627907,
+        "rotationangle": 0,
+        "locationx": 11.99128,
+        "locationy": 2.110465
+      },
+      {
+        "name": "N/A",
+        "width": 1.2906977,
+        "height": 4.9709306,
+        "rotationangle": 0,
+        "locationx": 13.709303,
+        "locationy": 2.2848837
+      },
+      {
+        "name": "N/A",
+        "width": 1.2732558,
+        "height": 4.9709306,
+        "rotationangle": 0,
+        "locationx": 0.008720931,
+        "locationy": 2.3023257
+      },
+      {
+        "name": "N/A",
+        "width": 0.3401163,
+        "height": 2.2848837,
+        "rotationangle": 0,
+        "locationx": -0.017441861,
+        "locationy": -0.026162792
+      },
+      {
+        "name": "N/A",
+        "width": 0.28779072,
+        "height": 2.2936046,
+        "rotationangle": 0,
+        "locationx": 14.71221,
+        "locationy": -0.043604653
+      },
+      {
+        "name": "N/A",
+        "width": 2.005814,
+        "height": 0.35755816,
+        "rotationangle": 0,
+        "locationx": 1.0290698,
+        "locationy": 2.0930233
+      }
+    ]
+  ]
+]

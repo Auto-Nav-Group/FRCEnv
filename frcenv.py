@@ -35,7 +35,7 @@ class FRCEnv(gym.Env):
     def _get_obs(self, state):
         return {
             "observation" : state,
-            "achieved_goal" : self.achieved_goal,
+            "achieved_goal" : state,#self.achieved_goal,
             "desired_goal" : self.internal_env.target,
         }
 
