@@ -8,7 +8,7 @@ import math
 np.seterr(all='raise')
 
 ASSETS = "G:/Projects/AutoNav/FRCEnv/assets"
-JSON = "G:/Projects/AutoNav/FRCEnv/assets/FRC2023Map.json"
+JSON = "G:/Projects/AutoNav/FRCEnv/assets/BasicMap.json"
 
 class FRCEnv(gym.Env):
     metadata = {'render.modes': ['human', 'rgb_array']}
@@ -27,7 +27,7 @@ class FRCEnv(gym.Env):
         self.internal_env = RobotVEnv(map, ASSETS)
         self.state = None
         self.reward_weights = [
-            0, 0.5, 0,0,0,0,0.25,0.25,0,0
+            0.2, 0.05, 0, 0,0,0,0.025,0.025,0,0
         ]
         self.top_reward = -math.inf
         self.achieved_goal= None
@@ -82,10 +82,10 @@ class FRCEnv(gym.Env):
         pass
 
     def compute_reward(self, achieved_goal, desired_goal, info):
-        return np.add(
-            -np.dot(
-                np.array(achieved_goal) - np.array(desired_goal),
-                self.reward_weights
-            ),
-            -0.1
-        )
+        a_goal = np.array(achieved_goal)
+        d_goal = np.array(desired_goal)
+        if len(a_goal.shape) == 1:  # Single goal
+            reward = np.sum(self.reward_weights * np.abs(a_goal - d_goal) ** 2)
+        else:  # Batch of goals
+            reward = np.sum(self.reward_weights * np.abs(np.subtract(a_goal, d_goal)) ** 2, axis=1)
+        return -reward
