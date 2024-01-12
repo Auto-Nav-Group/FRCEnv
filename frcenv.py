@@ -13,22 +13,23 @@ JSON = "G:/Projects/AutoNav/FRCEnv/assets/FRC2023Map.json"
 class FRCEnv(gym.Env):
     metadata = {'render.modes': ['human', 'rgb_array']}
     def __init__(self, render_mode=None):
+        map = Map(json.loads(open(JSON, "r").read()))
+        self.internal_env = RobotVEnv(map, ASSETS)
         self.action_space = spaces.Box(low=-1, high=1, shape=(2,))
         self.observation_space = spaces.Dict(
             {
-                "observation" : spaces.Box(low=-1, high=1, shape=(12,)),
-                "achieved_goal" : spaces.Box(low=-1, high=1, shape=(12,)),
-                "desired_goal": spaces.Box(low=-1, high=1, shape=(12,)),
+                "observation" : spaces.Box(low=-1, high=1, shape=(self.internal_env.state_size,)),
+                "achieved_goal" : spaces.Box(low=-1, high=1, shape=(self.internal_env.state_size,)),
+                "desired_goal": spaces.Box(low=-1, high=1, shape=(self.internal_env.state_size,)),
             }
         )
         assert render_mode is None or render_mode in self.metadata["render_modes"]
-        map = Map(json.loads(open(JSON, "r").read()))
 
-        self.internal_env = RobotVEnv(map, ASSETS)
         self.state = None
         self.reward_weights = [
             0.25, 0.25, 0, 0,0,0,0.25,0,0,0, 25, 0
-        ]
+        ]+self.internal_env.lidar_zeros
+
         self.top_reward = -math.inf
         self.achieved_goal= None
 

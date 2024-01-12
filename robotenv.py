@@ -56,8 +56,11 @@ class RobotVEnv:
         self.environment_ids = []
         self.environment_dim = 0
         self.robotid = 0
-        self.target = [0,0,0,0,0,0,0,1,0,0, 0, 1]
+        self.lidar_zeros = np.zeros(LIDAR_POINTS).tolist()
+        self.target = [0,0,0,0,0,0,0,1,0,0, 0, 1] + self.lidar_zeros
         self.max_mes = math.sqrt(self.basis.size.width**2+ self.basis.size.height**2)
+        dynamic_state_size = LIDAR_POINTS
+        self.state_size = 12+dynamic_state_size
 
     def step(self, action):
         target = False
@@ -146,10 +149,12 @@ class RobotVEnv:
             done = True
         if collision is True:
             done = True
+        min_dist, dists = self._run_lidar()
         robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, action[0], action[1], self.init_x, self.init_y, self.bool_conv(collision), self.bool_conv(achieved_goal)]
+        robot_state = robot_state + dists
         # reward = self.get_reward(target, collision, action)
         # return robot_state, reward, done, target
-        return robot_state, collision, done, achieved_goal, dist_traveled, self._run_lidar()
+        return robot_state, collision, done, achieved_goal, dist_traveled, min_dist
 
     def reset(self, reload=False, angle=-1, load_state=None): # Create a new environment
         p.resetSimulation()
@@ -215,8 +220,10 @@ class RobotVEnv:
         distance = math.sqrt((self.goal_x-self.x)**2+(self.goal_y-self.y)**2)
         self.init_x = self.x
         self.init_y = self.y
+        min_dist, dists = self._run_lidar()
         robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, 0, 0, self.init_x, self.init_y, 0, 0]
-        return robot_state, distance, self._run_lidar()
+        robot_state = robot_state + dists
+        return robot_state, distance, min_dist
 
     def debug_circle_reset(self):
         global state, distance, min_dist
@@ -273,7 +280,7 @@ class RobotVEnv:
 
         if len(non_goal) == 0:
             return 0
-        return min(non_goal)
+        return min(non_goal), non_goal
 
     def _new_goal(self, new_pos=True):
         if new_pos:
