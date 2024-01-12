@@ -44,6 +44,7 @@ class RobotVEnv:
         self.lidar_dists = []
         self.pybullet_instance = p
         self.debug_start_angle = 0
+        self.bool_conv = lambda x: int(x==True)
         if GUI:
             self.client = p.connect(p.GUI)
         else:
@@ -55,7 +56,7 @@ class RobotVEnv:
         self.environment_ids = []
         self.environment_dim = 0
         self.robotid = 0
-        self.target = [0,0,0,0,0,0,0,1,0,0]
+        self.target = [0,0,0,0,0,0,0,1,0,0, 0, 1]
         self.max_mes = math.sqrt(self.basis.size.width**2+ self.basis.size.height**2)
 
     def step(self, action):
@@ -145,7 +146,7 @@ class RobotVEnv:
             done = True
         if collision is True:
             done = True
-        robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, action[0], action[1], self.init_x, self.init_y]
+        robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, action[0], action[1], self.init_x, self.init_y, self.bool_conv(collision), self.bool_conv(achieved_goal)]
         # reward = self.get_reward(target, collision, action)
         # return robot_state, reward, done, target
         return robot_state, collision, done, achieved_goal, dist_traveled, self._run_lidar()
@@ -214,7 +215,7 @@ class RobotVEnv:
         distance = math.sqrt((self.goal_x-self.x)**2+(self.goal_y-self.y)**2)
         self.init_x = self.x
         self.init_y = self.y
-        robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, 0, 0, self.init_x, self.init_y]
+        robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, 0, 0, self.init_x, self.init_y, 0, 0]
         return robot_state, distance, self._run_lidar()
 
     def debug_circle_reset(self):

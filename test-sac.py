@@ -11,7 +11,7 @@ warnings.filterwarnings("ignore")
 from stable_baselines3 import SAC
 from stable_baselines3.her.her_replay_buffer import HerReplayBuffer
 
-LEARNING_STEPS = 100000
+LEARNING_STEPS = 150000
 
 env = FRCEnv()
 

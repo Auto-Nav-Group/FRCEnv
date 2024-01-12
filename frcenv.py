@@ -8,7 +8,7 @@ import math
 np.seterr(all='raise')
 
 ASSETS = "G:/Projects/AutoNav/FRCEnv/assets"
-JSON = "G:/Projects/AutoNav/FRCEnv/assets/BasicMap.json"
+JSON = "G:/Projects/AutoNav/FRCEnv/assets/FRC2023Map.json"
 
 class FRCEnv(gym.Env):
     metadata = {'render.modes': ['human', 'rgb_array']}
@@ -16,9 +16,9 @@ class FRCEnv(gym.Env):
         self.action_space = spaces.Box(low=-1, high=1, shape=(2,))
         self.observation_space = spaces.Dict(
             {
-                "observation" : spaces.Box(low=-1, high=1, shape=(10,)),
-                "achieved_goal" : spaces.Box(low=-1, high=1, shape=(10,)),
-                "desired_goal": spaces.Box(low=-1, high=1, shape=(10,)),
+                "observation" : spaces.Box(low=-1, high=1, shape=(12,)),
+                "achieved_goal" : spaces.Box(low=-1, high=1, shape=(12,)),
+                "desired_goal": spaces.Box(low=-1, high=1, shape=(12,)),
             }
         )
         assert render_mode is None or render_mode in self.metadata["render_modes"]
@@ -27,7 +27,7 @@ class FRCEnv(gym.Env):
         self.internal_env = RobotVEnv(map, ASSETS)
         self.state = None
         self.reward_weights = [
-            0.2, 0.05, 0, 0,0,0,0.025,0.025,0,0
+            0.25, 0.25, 0, 0,0,0,0.25,0,0,0, 25, 0
         ]
         self.top_reward = -math.inf
         self.achieved_goal= None
@@ -50,7 +50,9 @@ class FRCEnv(gym.Env):
             state[6],
             state[7],
             state[8] / self.internal_env.basis.size.width,
-            state[9] / self.internal_env.basis.size.height
+            state[9] / self.internal_env.basis.size.height,
+            state[10],
+            state[11]
         ]
         return nstate
 
@@ -85,7 +87,7 @@ class FRCEnv(gym.Env):
         a_goal = np.array(achieved_goal)
         d_goal = np.array(desired_goal)
         if len(a_goal.shape) == 1:  # Single goal
-            reward = np.sum(self.reward_weights * np.abs(a_goal - d_goal) ** 2)
+            reward = np.sum(self.reward_weights * np.abs(a_goal - d_goal))
         else:  # Batch of goals
-            reward = np.sum(self.reward_weights * np.abs(np.subtract(a_goal, d_goal)) ** 2, axis=1)
+            reward = np.sum(self.reward_weights * np.abs(np.subtract(a_goal, d_goal)), axis=1)
         return -reward
