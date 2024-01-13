@@ -7,8 +7,8 @@ import numpy as np
 import math
 np.seterr(all='raise')
 
-ASSETS = "G:/Projects/AutoNav/FRCEnv/assets"
-JSON = "G:/Projects/AutoNav/FRCEnv/assets/FRC2023Map.json"
+ASSETS = "/content/FRCEnv/assets"
+JSON = "/content/FRCEnv/assets/FRC2023Map.json"
 
 class FRCEnv(gym.Env):
     metadata = {'render.modes': ['human', 'rgb_array']}

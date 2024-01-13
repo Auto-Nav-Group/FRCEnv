@@ -28,5 +28,5 @@ model = SAC('MultiInputPolicy', env, replay_buffer_class=HerReplayBuffer,
             policy_kwargs=dict(net_arch=[512, 512, 512, 512]))
 
 model.learn(int(LEARNING_STEPS))#, callback=WandbCallback())
-model.save("G:/Projects/AutoNav/FRCEnv/out/sac.zip")
+model.save("/content/FRCEnv/out/sac.zip")
 #run.finish()

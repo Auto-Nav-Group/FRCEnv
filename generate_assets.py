@@ -254,6 +254,6 @@ def from_map(map):
     #endregion
 
 if __name__ == "__main__":
-    map = Map(json.loads(open("G:/Projects/AutoNav/FRCEnv/assets/FRC2023Map.json", "r").read()))
+    map = Map(json.loads(open("/content/FRCEnv/assets/FRC2023Map.json", "r").read()))
     from_map(map)
     print("Done")

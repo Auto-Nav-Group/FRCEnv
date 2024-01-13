@@ -1,0 +1,50 @@
+{
+    "os": "Linux-6.1.58+-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-01-13T02:02:29.342225",
+    "startedAt": "2024-01-13T02:02:28.805328",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/content/FRCEnv/test-sac.py",
+    "codePathLocal": "test-sac.py",
+    "codePath": "test-sac.py",
+    "git": {
+        "remote": "https://github.com/Auto-Nav-Group/FRCEnv.git",
+        "commit": "bbbb50845dd45d0c68297a2a3da7e6272062cb08"
+    },
+    "email": null,
+    "root": "/content/FRCEnv",
+    "host": "d31af6880dec",
+    "username": "root",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 1,
+    "cpu_count_logical": 2,
+    "cpu_freq": {
+        "current": 2200.13,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2200.13,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.13,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 107.71508407592773,
+            "used": 26.683032989501953
+        }
+    },
+    "memory": {
+        "total": 12.674789428710938
+    }
+}

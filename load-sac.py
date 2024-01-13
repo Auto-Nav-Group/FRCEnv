@@ -2,7 +2,7 @@ from frcenv import FRCEnv
 from stable_baselines3 import SAC
 
 env = FRCEnv()
-model = SAC.load("G:/Projects/AutoNav/FRCEnv/out/sac.zip", env)
+model = SAC.load("/content/FRCEnv/out/sac.zip", env)
 
 while True:
     observation, _ = env.reset()
