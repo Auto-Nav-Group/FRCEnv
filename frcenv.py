@@ -27,7 +27,7 @@ class FRCEnv(gym.Env):
 
         self.state = None
         self.reward_weights = [
-            0.25, 0.25, 0, 0,0,0,0.25,0,0,0, 25, 0
+            0.25, 0.25, 0, 0,0,0,0.25,0,0,0, 50, 0
         ]+self.internal_env.lidar_zeros
 
         self.top_reward = -math.inf
@@ -35,8 +35,8 @@ class FRCEnv(gym.Env):
 
     def _get_obs(self, state):
         return {
-            "observation" : state,
-            "achieved_goal" : state,#self.achieved_goal,
+            "observation" : self._normalize_state(state),
+            "achieved_goal" : self._normalize_state(state),#self.achieved_goal,
             "desired_goal" : self.internal_env.target,
         }
 
@@ -55,6 +55,8 @@ class FRCEnv(gym.Env):
             state[10],
             state[11]
         ]
+        for i in range(len(state[12:])):
+            nstate.append(state[12+i] / self.internal_env.lidar_range)
         return nstate
 
     def _get_info(self, done):

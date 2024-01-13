@@ -241,7 +241,7 @@ def from_map(map):
         "    <visual>\n"
         "      <origin rpy=\"0 0 0\" xyz=\"0 0 0\"/>\n"
         "      <geometry>\n"
-        "        <box size=\"1 1 1\"/>\n"
+        "        <box size=\"1 1 0.5\"/>\n"
         "      </geometry>\n"
         "      <material name=\"green\">\n"
         "        <color rgba=\"0 1 0 0.5\"/>\n"

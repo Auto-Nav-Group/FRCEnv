@@ -14,11 +14,11 @@ MAX_SPEED = 5 # Maximum speed of the robot
 MAX_ANGULAR_SPEED = math.pi # Maximum angular speed of the robot
 TIP_ANGLE = 30
 
-LIDAR_RANGE = 10
+LIDAR_RANGE = 5000
 LIDAR_ANGLE = 2*np.pi
 LIDAR_POINTS = 100
 
-DEBUG_CIRCLE_COUNT = 100
+DEBUG_CIRCLE_COUNT = 10
 DEBUG_CIRCLE_INCREMENT = np.pi*2/DEBUG_CIRCLE_COUNT
 
 GRAVITY = 0
@@ -61,6 +61,7 @@ class RobotVEnv:
         self.max_mes = math.sqrt(self.basis.size.width**2+ self.basis.size.height**2)
         dynamic_state_size = LIDAR_POINTS
         self.state_size = 12+dynamic_state_size
+        self.lidar_range = LIDAR_RANGE
 
     def step(self, action):
         target = False
@@ -253,9 +254,9 @@ class RobotVEnv:
         start_positions = []
         end_positions = []
         for i in range(LIDAR_POINTS):
-            start_positions.append([self.x, self.y, 0.5])
+            start_positions.append([self.x, self.y, 0.6])
             end_positions.append([self.x + LIDAR_RANGE * math.cos(i * 2 * math.pi / LIDAR_POINTS - LIDAR_ANGLE/2),
-                                  self.y + LIDAR_RANGE * math.sin(i * 2 * math.pi / LIDAR_POINTS - LIDAR_ANGLE/2), 0.5])
+                                  self.y + LIDAR_RANGE * math.sin(i * 2 * math.pi / LIDAR_POINTS - LIDAR_ANGLE/2), 0.6])
         res = p.rayTestBatch(start_positions, end_positions)
 
         distances = []
@@ -263,13 +264,15 @@ class RobotVEnv:
 
         for i in range(len(res)):
             result = res[i]
-            if result[0] > -1 and result[0] != self.goal:
+            if result[0] > -1:
                 hit_position = result[3]  # Get the collision point
                 start_point = start_positions[i]
                 distance_to_collision = math.sqrt(math.pow(hit_position[0] - start_point[0], 2) + math.pow(hit_position[1] - start_point[1], 2))
                 distances.append(distance_to_collision)
                 if result[0] != self.goal:
                     non_goal.append(distance_to_collision)
+            else:
+                distances.append(LIDAR_RANGE) #TODO: Fix strange vanashing distances
                 #debug_ray = p.addUserDebugLine(start_point, hit_position, [1, 0, 0], 1, 0.01)
                 #self.ray_debug_id.append(debug_ray)
             #else:
@@ -280,7 +283,7 @@ class RobotVEnv:
 
         if len(non_goal) == 0:
             return 0
-        return min(non_goal), non_goal
+        return min(non_goal), distances
 
     def _new_goal(self, new_pos=True):
         if new_pos:
