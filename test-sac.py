@@ -15,7 +15,7 @@ LEARNING_STEPS = 150000
 
 env = FRCEnv()
 
-run = wandb.init(project="frc-env", entity="auto-nav-group", sync_tensorboard=True)
+#run = wandb.init(project="frc-env", entity="auto-nav-group", sync_tensorboard=True)
 
 her_kwargs = dict(n_sampled_goal=4, goal_selection_strategy='future', env=env)
 
@@ -27,6 +27,6 @@ model = SAC('MultiInputPolicy', env, replay_buffer_class=HerReplayBuffer,
             gamma=0.99, batch_size=1024, tau=0.05,
             policy_kwargs=dict(net_arch=[512, 512, 512, 512]))
 
-model.learn(int(LEARNING_STEPS), callback=WandbCallback(gradient_save_freq=1000, model_save_path=f"models/{run.id}"))
+model.learn(int(LEARNING_STEPS))#, callback=WandbCallback(gradient_save_freq=1000, model_save_path=f"models/{run.id}"))
 model.save("G:/Projects/AutoNav/FRCEnv/out/sac.zip")
-run.finish()
+#run.finish()

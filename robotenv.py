@@ -57,10 +57,10 @@ class RobotVEnv:
         self.environment_dim = 0
         self.robotid = 0
         self.lidar_zeros = np.zeros(LIDAR_POINTS).tolist()
-        self.target = [0,0,0,0,0,0,0,1,0,0, 0, 1] + self.lidar_zeros
+        self.target = [0,0,0,0,0,0,0,1, 0.6,0,0, 0, 0] + self.lidar_zeros
         self.max_mes = math.sqrt(self.basis.size.width**2+ self.basis.size.height**2)
         dynamic_state_size = LIDAR_POINTS
-        self.state_size = 12+dynamic_state_size
+        self.state_size = 13+dynamic_state_size
         self.lidar_range = LIDAR_RANGE
 
     def step(self, action):
@@ -151,7 +151,7 @@ class RobotVEnv:
         if collision is True:
             done = True
         min_dist, dists = self._run_lidar()
-        robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, action[0], action[1], self.init_x, self.init_y, self.bool_conv(collision), self.bool_conv(achieved_goal)]
+        robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, action[0], action[1], min_dist, self.init_x, self.init_y, self.bool_conv(collision), self.bool_conv(achieved_goal)]
         robot_state = robot_state + dists
         # reward = self.get_reward(target, collision, action)
         # return robot_state, reward, done, target
@@ -222,7 +222,7 @@ class RobotVEnv:
         self.init_x = self.x
         self.init_y = self.y
         min_dist, dists = self._run_lidar()
-        robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, 0, 0, self.init_x, self.init_y, 0, 0]
+        robot_state = [theta, distance, self.x, self.y, self.goal_x, self.goal_y, 0, 0, min_dist, self.init_x, self.init_y, 0, 0]
         robot_state = robot_state + dists
         return robot_state, distance, min_dist
 
@@ -255,8 +255,8 @@ class RobotVEnv:
         end_positions = []
         for i in range(LIDAR_POINTS):
             start_positions.append([self.x, self.y, 0.6])
-            end_positions.append([self.x + LIDAR_RANGE * math.cos(i * 2 * math.pi / LIDAR_POINTS - LIDAR_ANGLE/2),
-                                  self.y + LIDAR_RANGE * math.sin(i * 2 * math.pi / LIDAR_POINTS - LIDAR_ANGLE/2), 0.6])
+            end_positions.append([self.x + self.max_mes * math.cos(i * 2 * math.pi / LIDAR_POINTS - LIDAR_ANGLE/2),
+                                  self.y + self.max_mes * math.sin(i * 2 * math.pi / LIDAR_POINTS - LIDAR_ANGLE/2), 0.6])
         res = p.rayTestBatch(start_positions, end_positions)
 
         distances = []
@@ -272,7 +272,7 @@ class RobotVEnv:
                 if result[0] != self.goal:
                     non_goal.append(distance_to_collision)
             else:
-                distances.append(LIDAR_RANGE) #TODO: Fix strange vanashing distances
+                distances.append(self.max_mes) #TODO: Fix strange vanashing distances
                 #debug_ray = p.addUserDebugLine(start_point, hit_position, [1, 0, 0], 1, 0.01)
                 #self.ray_debug_id.append(debug_ray)
             #else:
@@ -302,7 +302,7 @@ class RobotVEnv:
                                                     self.basis.size.height / 2 - SPAWN_BORDER)
                 if goal_fine is True:
                     for i in range(len(self.basis.obstacles)):
-                        if self.basis.obstacles[i].Loc.x-self.basis.obstacles[i].Size.width/2<self.goal_x<self.basis.obstacles[i].Loc.x+self.basis.obstacles[i].Size.width/2 and self.basis.obstacles[i].Loc.y-self.basis.obstacles[i].Size.height/2<self.goal_y<self.basis.obstacles[i].Loc.y+self.basis.obstacles[i].Size.height/2:
+                        if self.basis.vobstacles[i].Loc.x-self.basis.vobstacles[i].Size.width/2<self.goal_x<self.basis.vobstacles[i].Loc.x+self.basis.vobstacles[i].Size.width/2 and self.basis.vobstacles[i].Loc.y-self.basis.vobstacles[i].Size.height/2<self.goal_y<self.basis.vobstacles[i].Loc.y+self.basis.vobstacles[i].Size.height/2:
                             goal_fine = False
                             self.goal_x = np.random.uniform(SPAWN_BORDER - self.basis.size.width / 2,
                                                             self.basis.size.width / 2 - SPAWN_BORDER)

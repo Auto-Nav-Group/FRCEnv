@@ -27,11 +27,14 @@ class FRCEnv(gym.Env):
 
         self.state = None
         self.reward_weights = [
-            0.25, 0.25, 0, 0,0,0,0.25,0,0,0, 50, -50
+            -0.25, -0.25, -0, -0, -0, -0, -0.25, -0.25, -0.5, -0, -0, -100, 100
         ]+self.internal_env.lidar_zeros
 
         self.top_reward = -math.inf
         self.achieved_goal= None
+
+        self.ep_length = 0
+        self.max_ep_length = 100
 
     def _get_obs(self, state):
         return {
@@ -56,7 +59,7 @@ class FRCEnv(gym.Env):
             state[11]
         ]
         for i in range(len(state[12:])):
-            nstate.append(state[12+i] / self.internal_env.lidar_range)
+            nstate.append(state[12+i] / self.internal_env.max_mes)
         return nstate
 
     def _get_info(self, done):
@@ -70,6 +73,10 @@ class FRCEnv(gym.Env):
         if reward > self.top_reward:
             self.top_reward = reward
             self.achieved_goal = state
+        self.ep_length += 1
+        if self.ep_length >= self.max_ep_length:
+            done = True
+            state[11] = 1
         out_state = self._get_obs(state)
         return out_state, reward, done, False, self._get_info(achieved_goal)
 
@@ -78,6 +85,7 @@ class FRCEnv(gym.Env):
         self.achieved_goal= state
         out_state = self._get_obs(state)
         out_info = self._get_info(False)
+        self.ep_length = 0
         return out_state, out_info
 
     def render(self):
@@ -90,7 +98,7 @@ class FRCEnv(gym.Env):
         a_goal = np.array(achieved_goal)
         d_goal = np.array(desired_goal)
         if len(a_goal.shape) == 1:  # Single goal
-            reward = np.sum(self.reward_weights * np.abs(a_goal - d_goal))
+            reward = np.sum(self.reward_weights * np.abs(a_goal - d_goal))-1
         else:  # Batch of goals
-            reward = np.sum(self.reward_weights * np.abs(np.subtract(a_goal, d_goal)), axis=1)
-        return -reward
+            reward = np.subtract(np.sum(self.reward_weights * np.abs(np.subtract(a_goal, d_goal)), axis=1), 1)
+        return reward
