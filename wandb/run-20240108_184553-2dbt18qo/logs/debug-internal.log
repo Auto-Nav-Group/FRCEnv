@@ -1,0 +1,201 @@
+2024-01-08 18:45:53,671 INFO    StreamThr :60172 [internal.py:wandb_internal():86] W&B internal server running at pid: 60172, started at: 2024-01-08 18:45:53.670620
+2024-01-08 18:45:53,673 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: status
+2024-01-08 18:45:53,693 INFO    WriterThread:60172 [datastore.py:open_for_write():85] open: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\run-2dbt18qo.wandb
+2024-01-08 18:45:53,694 DEBUG   SenderThread:60172 [sender.py:send():380] send: header
+2024-01-08 18:45:53,757 DEBUG   SenderThread:60172 [sender.py:send():380] send: run
+2024-01-08 18:45:54,014 INFO    SenderThread:60172 [dir_watcher.py:__init__():211] watching files in: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files
+2024-01-08 18:45:54,014 INFO    SenderThread:60172 [sender.py:_start_run_threads():1122] run started: 2dbt18qo with start time 1704757553.671618
+2024-01-08 18:45:54,040 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: check_version
+2024-01-08 18:45:54,040 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: check_version
+2024-01-08 18:45:54,149 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: run_start
+2024-01-08 18:45:54,182 DEBUG   HandlerThread:60172 [system_info.py:__init__():32] System info init
+2024-01-08 18:45:54,182 DEBUG   HandlerThread:60172 [system_info.py:__init__():47] System info init done
+2024-01-08 18:45:54,182 INFO    HandlerThread:60172 [system_monitor.py:start():194] Starting system monitor
+2024-01-08 18:45:54,183 INFO    SystemMonitor:60172 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-08 18:45:54,183 INFO    HandlerThread:60172 [system_monitor.py:probe():214] Collecting system info
+2024-01-08 18:45:54,191 INFO    SystemMonitor:60172 [interfaces.py:start():190] Started cpu monitoring
+2024-01-08 18:45:54,192 INFO    SystemMonitor:60172 [interfaces.py:start():190] Started disk monitoring
+2024-01-08 18:45:54,194 INFO    SystemMonitor:60172 [interfaces.py:start():190] Started gpu monitoring
+2024-01-08 18:45:54,202 INFO    SystemMonitor:60172 [interfaces.py:start():190] Started memory monitoring
+2024-01-08 18:45:54,216 DEBUG   HandlerThread:60172 [system_info.py:probe():196] Probing system
+2024-01-08 18:45:54,234 INFO    SystemMonitor:60172 [interfaces.py:start():190] Started network monitoring
+2024-01-08 18:45:54,237 DEBUG   HandlerThread:60172 [system_info.py:_probe_git():181] Probing git
+2024-01-08 18:45:54,351 DEBUG   HandlerThread:60172 [system_info.py:_probe_git():189] Probing git done
+2024-01-08 18:45:54,352 DEBUG   HandlerThread:60172 [system_info.py:probe():244] Probing system done
+2024-01-08 18:45:54,352 DEBUG   HandlerThread:60172 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19041-SP0', 'python': '3.8.2', 'heartbeatAt': '2024-01-08T23:45:54.234526', 'startedAt': '2024-01-08T23:45:53.642617', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'G:\\Projects\\AutoNav\\FRCEnv\\test-sac.py', 'codePathLocal': 'test-sac.py', 'codePath': 'test-sac.py', 'git': {'remote': 'https://github.com/Auto-Nav-Group/FRCEnv.git', 'commit': '98fce8ddfcd888cb5a259e4592ccbc2181adb2b0'}, 'email': '74438588+TreeBronch@users.noreply.github.com', 'root': 'G:/Projects/AutoNav/FRCEnv', 'host': 'FLIDAR-PC', 'username': 'Maxim', 'executable': 'C:\\Program Files\\Python38\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 4200.0, 'min': 0.0, 'max': 4200.0}, 'cpu_freq_per_core': [{'current': 4200.0, 'min': 0.0, 'max': 4200.0}], 'disk': {'/': {'total': 931.5107383728027, 'used': 742.1288452148438}}, 'gpu': 'NVIDIA TITAN X (Pascal)', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA TITAN X (Pascal)', 'memory_total': 12884901888}], 'memory': {'total': 63.964080810546875}}
+2024-01-08 18:45:54,352 INFO    HandlerThread:60172 [system_monitor.py:probe():224] Finished collecting system info
+2024-01-08 18:45:54,352 INFO    HandlerThread:60172 [system_monitor.py:probe():227] Publishing system info
+2024-01-08 18:45:54,352 DEBUG   HandlerThread:60172 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-01-08 18:45:54,354 DEBUG   HandlerThread:60172 [system_info.py:_save_pip():68] Saving pip packages done
+2024-01-08 18:45:54,357 INFO    HandlerThread:60172 [system_monitor.py:probe():229] Finished publishing system info
+2024-01-08 18:45:54,376 DEBUG   SenderThread:60172 [sender.py:send():380] send: files
+2024-01-08 18:45:54,376 INFO    SenderThread:60172 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2024-01-08 18:45:54,395 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-08 18:45:54,396 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: stop_status
+2024-01-08 18:45:54,402 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-08 18:45:54,625 DEBUG   SenderThread:60172 [sender.py:send():380] send: telemetry
+2024-01-08 18:45:54,741 INFO    wandb-upload_0:60172 [upload_job.py:push():131] Uploaded file C:\Users\Maxim\AppData\Local\Temp\tmpgthl0xd8wandb\dqy8qtwi-wandb-metadata.json
+2024-01-08 18:45:55,027 INFO    Thread-20 :60172 [dir_watcher.py:_on_file_created():271] file/dir created: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\output.log
+2024-01-08 18:45:55,027 INFO    Thread-20 :60172 [dir_watcher.py:_on_file_created():271] file/dir created: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\wandb-metadata.json
+2024-01-08 18:45:55,028 INFO    Thread-20 :60172 [dir_watcher.py:_on_file_created():271] file/dir created: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\requirements.txt
+2024-01-08 18:45:57,046 INFO    Thread-20 :60172 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\output.log
+2024-01-08 18:45:58,007 DEBUG   SenderThread:60172 [sender.py:send():380] send: telemetry
+2024-01-08 18:45:58,023 INFO    HandlerThread:60172 [handler.py:handle_tbrecord():764] handling tbrecord: tbrecord {
+  log_dir: "runs\\SAC_41"
+  save: true
+}
+control {
+  relay_id: "049f925520274ee692865f562bc64c3b"
+}
+_info {
+  stream_id: "2dbt18qo"
+}
+
+2024-01-08 18:45:58,024 DEBUG   HandlerThread:60172 [config_util.py:dict_from_config_file():101] no default config file found in config-defaults.yaml
+2024-01-08 18:45:58,395 DEBUG   SenderThread:60172 [sender.py:send():380] send: tbrecord
+2024-01-08 18:45:58,396 DEBUG   SenderThread:60172 [sender.py:send():380] send: telemetry
+2024-01-08 18:45:58,396 DEBUG   SenderThread:60172 [sender.py:send():380] send: config
+2024-01-08 18:45:58,406 DEBUG   Thread-26 :60172 [tb_watcher.py:_process_events():284] Encountered tensorboard directory watcher error: [WinError 1314] A required privilege is not held by the client: 'G:\\Projects\\AutoNav\\FRCEnv\\runs\\SAC_41\\events.out.tfevents.1704757558.FLIDAR-PC.23884.0' -> 'G:\\Projects\\AutoNav\\FRCEnv\\wandb\\run-20240108_184553-2dbt18qo\\files\\events.out.tfevents.1704757558.FLIDAR-PC.23884.0'
+2024-01-08 18:45:59,456 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: status_report
+2024-01-08 18:46:01,085 INFO    Thread-20 :60172 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\output.log
+2024-01-08 18:46:01,431 DEBUG   SenderThread:60172 [sender.py:send():380] send: exit
+2024-01-08 18:46:01,431 INFO    SenderThread:60172 [sender.py:send_exit():585] handling exit code: 0
+2024-01-08 18:46:01,432 INFO    SenderThread:60172 [sender.py:send_exit():587] handling runtime: 7
+2024-01-08 18:46:01,433 INFO    SenderThread:60172 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-08 18:46:01,433 INFO    SenderThread:60172 [sender.py:send_exit():593] send defer
+2024-01-08 18:46:01,434 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:01,434 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 0
+2024-01-08 18:46:01,435 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:01,435 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-01-08 18:46:01,435 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 1
+2024-01-08 18:46:01,435 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:01,435 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 1
+2024-01-08 18:46:01,436 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:01,436 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-01-08 18:46:01,436 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 2
+2024-01-08 18:46:01,437 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:01,437 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 2
+2024-01-08 18:46:01,437 INFO    HandlerThread:60172 [system_monitor.py:finish():203] Stopping system monitor
+2024-01-08 18:46:01,437 DEBUG   SystemMonitor:60172 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-08 18:46:01,438 INFO    HandlerThread:60172 [interfaces.py:finish():202] Joined cpu monitor
+2024-01-08 18:46:01,452 DEBUG   SystemMonitor:60172 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-01-08 18:46:01,454 INFO    HandlerThread:60172 [interfaces.py:finish():202] Joined disk monitor
+2024-01-08 18:46:01,454 DEBUG   SystemMonitor:60172 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-01-08 18:46:01,569 INFO    HandlerThread:60172 [interfaces.py:finish():202] Joined gpu monitor
+2024-01-08 18:46:01,569 INFO    HandlerThread:60172 [interfaces.py:finish():202] Joined memory monitor
+2024-01-08 18:46:01,570 INFO    HandlerThread:60172 [interfaces.py:finish():202] Joined network monitor
+2024-01-08 18:46:01,570 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:01,570 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-01-08 18:46:01,570 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 3
+2024-01-08 18:46:01,571 DEBUG   SenderThread:60172 [sender.py:send():380] send: stats
+2024-01-08 18:46:01,571 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:01,571 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 3
+2024-01-08 18:46:01,572 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:01,572 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-01-08 18:46:01,573 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 4
+2024-01-08 18:46:01,573 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:01,573 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 4
+2024-01-08 18:46:02,149 INFO    Thread-20 :60172 [dir_watcher.py:_on_file_created():271] file/dir created: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\wandb-summary.json
+2024-01-08 18:46:09,150 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-08 18:46:09,151 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: status_report
+2024-01-08 18:46:09,151 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: keepalive
+2024-01-08 18:46:09,151 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:09,152 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-01-08 18:46:09,152 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 5
+2024-01-08 18:46:09,152 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: poll_exit
+2024-01-08 18:46:09,153 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:09,153 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 5
+2024-01-08 18:46:09,154 DEBUG   SenderThread:60172 [sender.py:send():380] send: summary
+2024-01-08 18:46:09,159 INFO    SenderThread:60172 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-08 18:46:09,160 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:09,160 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-01-08 18:46:09,161 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 6
+2024-01-08 18:46:09,161 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:09,161 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 6
+2024-01-08 18:46:09,162 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:09,162 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-01-08 18:46:09,179 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: status_report
+2024-01-08 18:46:09,211 INFO    Thread-20 :60172 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\wandb-summary.json
+2024-01-08 18:46:09,402 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 7
+2024-01-08 18:46:09,402 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:09,402 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 7
+2024-01-08 18:46:09,403 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:09,403 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-01-08 18:46:10,219 INFO    Thread-20 :60172 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\config.yaml
+2024-01-08 18:46:12,502 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: keepalive
+2024-01-08 18:46:12,519 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 8
+2024-01-08 18:46:12,520 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:12,520 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 8
+2024-01-08 18:46:12,520 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:12,520 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-01-08 18:46:12,521 INFO    SenderThread:60172 [job_builder.py:build():281] Attempting to build job artifact
+2024-01-08 18:46:12,522 INFO    SenderThread:60172 [job_builder.py:_get_source_type():393] is repo sourced job
+2024-01-08 18:46:12,531 INFO    SenderThread:60172 [job_builder.py:build():369] adding wandb-job metadata file
+2024-01-08 18:46:12,560 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 9
+2024-01-08 18:46:12,561 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:12,561 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 9
+2024-01-08 18:46:12,561 DEBUG   SenderThread:60172 [sender.py:send():380] send: artifact
+2024-01-08 18:46:13,011 INFO    SenderThread:60172 [sender.py:send_artifact():1456] sent artifact job-https___github.com_Auto-Nav-Group_FRCEnv.git_test-sac.py - {'id': 'QXJ0aWZhY3Q6Njg1MjQwMjg1', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyODQ2Njk0Mg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Njg1MjQ4MjYy', 'versionIndex': 1}}}
+2024-01-08 18:46:13,011 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:13,011 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-01-08 18:46:13,011 INFO    SenderThread:60172 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-01-08 18:46:13,326 INFO    Thread-20 :60172 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\output.log
+2024-01-08 18:46:13,331 INFO    SenderThread:60172 [dir_watcher.py:finish():388] scan: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files
+2024-01-08 18:46:13,331 INFO    SenderThread:60172 [dir_watcher.py:finish():402] scan save: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\config.yaml config.yaml
+2024-01-08 18:46:13,332 INFO    SenderThread:60172 [dir_watcher.py:finish():402] scan save: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\output.log output.log
+2024-01-08 18:46:13,346 INFO    SenderThread:60172 [dir_watcher.py:finish():402] scan save: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\requirements.txt requirements.txt
+2024-01-08 18:46:13,347 INFO    SenderThread:60172 [dir_watcher.py:finish():402] scan save: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\wandb-metadata.json wandb-metadata.json
+2024-01-08 18:46:13,348 INFO    SenderThread:60172 [dir_watcher.py:finish():402] scan save: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\wandb-summary.json wandb-summary.json
+2024-01-08 18:46:13,348 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 10
+2024-01-08 18:46:13,349 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:13,349 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 10
+2024-01-08 18:46:13,354 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:13,354 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-01-08 18:46:13,355 INFO    SenderThread:60172 [file_pusher.py:finish():175] shutting down file pusher
+2024-01-08 18:46:13,664 INFO    wandb-upload_0:60172 [upload_job.py:push():131] Uploaded file G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\config.yaml
+2024-01-08 18:46:13,776 INFO    wandb-upload_1:60172 [upload_job.py:push():131] Uploaded file G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\output.log
+2024-01-08 18:46:13,807 INFO    wandb-upload_3:60172 [upload_job.py:push():131] Uploaded file G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\wandb-summary.json
+2024-01-08 18:46:13,829 INFO    wandb-upload_2:60172 [upload_job.py:push():131] Uploaded file G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\files\requirements.txt
+2024-01-08 18:46:14,090 INFO    Thread-19 :60172 [sender.py:transition_state():613] send defer: 11
+2024-01-08 18:46:14,149 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:14,149 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 11
+2024-01-08 18:46:14,150 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:14,151 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-01-08 18:46:14,151 INFO    SenderThread:60172 [file_pusher.py:join():181] waiting for file pusher
+2024-01-08 18:46:14,152 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 12
+2024-01-08 18:46:14,152 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:14,153 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 12
+2024-01-08 18:46:14,154 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:14,154 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-01-08 18:46:14,154 INFO    SenderThread:60172 [file_stream.py:finish():595] file stream finish called
+2024-01-08 18:46:14,306 INFO    SenderThread:60172 [file_stream.py:finish():599] file stream finish is done
+2024-01-08 18:46:14,307 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 13
+2024-01-08 18:46:14,307 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:14,307 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 13
+2024-01-08 18:46:14,308 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:14,308 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-01-08 18:46:14,308 INFO    SenderThread:60172 [sender.py:transition_state():613] send defer: 14
+2024-01-08 18:46:14,309 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:46:14,310 DEBUG   SenderThread:60172 [sender.py:send():380] send: final
+2024-01-08 18:46:14,310 INFO    HandlerThread:60172 [handler.py:handle_request_defer():172] handle defer: 14
+2024-01-08 18:46:14,310 DEBUG   SenderThread:60172 [sender.py:send():380] send: footer
+2024-01-08 18:46:14,311 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:46:14,311 INFO    SenderThread:60172 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-01-08 18:46:14,312 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-08 18:46:14,312 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: server_info
+2024-01-08 18:46:14,312 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: get_summary
+2024-01-08 18:46:14,312 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: sampled_history
+2024-01-08 18:46:14,313 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-08 18:46:14,313 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: poll_exit
+2024-01-08 18:46:14,314 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: server_info
+2024-01-08 18:46:14,319 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: job_info
+2024-01-08 18:46:14,381 DEBUG   SenderThread:60172 [sender.py:send_request():407] send_request: job_info
+2024-01-08 18:46:14,381 INFO    MainThread:60172 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2024-01-08 18:46:14,382 INFO    MainThread:60172 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2024-01-08 18:46:14,382 INFO    MainThread:60172 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2024-01-08 18:46:14,382 DEBUG   HandlerThread:60172 [handler.py:handle_request():146] handle_request: shutdown
+2024-01-08 18:46:14,382 INFO    HandlerThread:60172 [handler.py:finish():866] shutting down handler
+2024-01-08 18:46:15,336 INFO    WriterThread:60172 [datastore.py:close():294] close: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184553-2dbt18qo\run-2dbt18qo.wandb
+2024-01-08 18:46:15,383 INFO    SenderThread:60172 [sender.py:finish():1534] shutting down sender
+2024-01-08 18:46:15,383 INFO    SenderThread:60172 [file_pusher.py:finish():175] shutting down file pusher
+2024-01-08 18:46:15,383 INFO    SenderThread:60172 [file_pusher.py:join():181] waiting for file pusher

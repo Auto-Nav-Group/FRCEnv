@@ -1,0 +1,29 @@
+Using cuda device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Traceback (most recent call last):
+  File "D:/Programs/Jetbrains/SoftwareFiles/apps/PyCharm-P/ch-0/231.9011.38/plugins/python/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "D:\Programs\Jetbrains\SoftwareFiles\apps\PyCharm-P\ch-0\231.9011.38\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "G:\Projects\AutoNav\FRCEnv\test-sac.py", line 29, in <module>
+    model.learn(int(LEARNING_STEPS), callback=WandbCallback(gradient_save_freq=1000))
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\sac\sac.py", line 307, in learn
+    return super().learn(
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\off_policy_algorithm.py", line 328, in learn
+    rollout = self.collect_rollouts(
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\off_policy_algorithm.py", line 560, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(actions)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\vec_env\base_vec_env.py", line 206, in step
+    return self.step_wait()
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+  File "G:\Projects\AutoNav\FRCEnv\frcenv.py", line 64, in step
+    reward = self.compute_reward(state, self.internal_env.target, None)
+  File "G:\Projects\AutoNav\FRCEnv\frcenv.py", line 86, in compute_reward
+    -np.dot(
+  File "<__array_function__ internals>", line 180, in dot
+ValueError: shapes (10,) and (9,) not aligned: 10 (dim 0) != 9 (dim 0)
+Logging to runs\SAC_26

@@ -1,0 +1,124 @@
+2024-01-08 18:43:58,680 INFO    StreamThr :14492 [internal.py:wandb_internal():86] W&B internal server running at pid: 14492, started at: 2024-01-08 18:43:58.679074
+2024-01-08 18:43:58,683 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: status
+2024-01-08 18:43:58,703 INFO    WriterThread:14492 [datastore.py:open_for_write():85] open: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\run-2yq8yqsj.wandb
+2024-01-08 18:43:58,704 DEBUG   SenderThread:14492 [sender.py:send():380] send: header
+2024-01-08 18:43:58,781 DEBUG   SenderThread:14492 [sender.py:send():380] send: run
+2024-01-08 18:43:59,053 INFO    SenderThread:14492 [dir_watcher.py:__init__():211] watching files in: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\files
+2024-01-08 18:43:59,053 INFO    SenderThread:14492 [sender.py:_start_run_threads():1122] run started: 2yq8yqsj with start time 1704757438.680075
+2024-01-08 18:43:59,091 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: check_version
+2024-01-08 18:43:59,091 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: check_version
+2024-01-08 18:43:59,222 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: run_start
+2024-01-08 18:43:59,256 DEBUG   HandlerThread:14492 [system_info.py:__init__():32] System info init
+2024-01-08 18:43:59,256 DEBUG   HandlerThread:14492 [system_info.py:__init__():47] System info init done
+2024-01-08 18:43:59,257 INFO    HandlerThread:14492 [system_monitor.py:start():194] Starting system monitor
+2024-01-08 18:43:59,257 INFO    SystemMonitor:14492 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-01-08 18:43:59,258 INFO    HandlerThread:14492 [system_monitor.py:probe():214] Collecting system info
+2024-01-08 18:43:59,266 INFO    SystemMonitor:14492 [interfaces.py:start():190] Started cpu monitoring
+2024-01-08 18:43:59,267 INFO    SystemMonitor:14492 [interfaces.py:start():190] Started disk monitoring
+2024-01-08 18:43:59,268 INFO    SystemMonitor:14492 [interfaces.py:start():190] Started gpu monitoring
+2024-01-08 18:43:59,285 INFO    SystemMonitor:14492 [interfaces.py:start():190] Started memory monitoring
+2024-01-08 18:43:59,303 INFO    SystemMonitor:14492 [interfaces.py:start():190] Started network monitoring
+2024-01-08 18:43:59,311 DEBUG   HandlerThread:14492 [system_info.py:probe():196] Probing system
+2024-01-08 18:43:59,313 DEBUG   HandlerThread:14492 [system_info.py:_probe_git():181] Probing git
+2024-01-08 18:43:59,435 DEBUG   HandlerThread:14492 [system_info.py:_probe_git():189] Probing git done
+2024-01-08 18:43:59,435 DEBUG   HandlerThread:14492 [system_info.py:probe():244] Probing system done
+2024-01-08 18:43:59,435 DEBUG   HandlerThread:14492 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.19041-SP0', 'python': '3.8.2', 'heartbeatAt': '2024-01-08T23:43:59.311236', 'startedAt': '2024-01-08T23:43:58.653104', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'G:\\Projects\\AutoNav\\FRCEnv\\test-sac.py', 'codePathLocal': 'test-sac.py', 'codePath': 'test-sac.py', 'git': {'remote': 'https://github.com/Auto-Nav-Group/FRCEnv.git', 'commit': '98fce8ddfcd888cb5a259e4592ccbc2181adb2b0'}, 'email': '74438588+TreeBronch@users.noreply.github.com', 'root': 'G:/Projects/AutoNav/FRCEnv', 'host': 'FLIDAR-PC', 'username': 'Maxim', 'executable': 'C:\\Program Files\\Python38\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 4200.0, 'min': 0.0, 'max': 4200.0}, 'cpu_freq_per_core': [{'current': 4200.0, 'min': 0.0, 'max': 4200.0}], 'disk': {'/': {'total': 931.5107383728027, 'used': 742.1286277770996}}, 'gpu': 'NVIDIA TITAN X (Pascal)', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA TITAN X (Pascal)', 'memory_total': 12884901888}], 'memory': {'total': 63.964080810546875}}
+2024-01-08 18:43:59,436 INFO    HandlerThread:14492 [system_monitor.py:probe():224] Finished collecting system info
+2024-01-08 18:43:59,436 INFO    HandlerThread:14492 [system_monitor.py:probe():227] Publishing system info
+2024-01-08 18:43:59,436 DEBUG   HandlerThread:14492 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-01-08 18:43:59,438 DEBUG   HandlerThread:14492 [system_info.py:_save_pip():68] Saving pip packages done
+2024-01-08 18:43:59,440 INFO    HandlerThread:14492 [system_monitor.py:probe():229] Finished publishing system info
+2024-01-08 18:43:59,462 DEBUG   SenderThread:14492 [sender.py:send():380] send: files
+2024-01-08 18:43:59,462 INFO    SenderThread:14492 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2024-01-08 18:43:59,477 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: stop_status
+2024-01-08 18:43:59,477 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: stop_status
+2024-01-08 18:43:59,484 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: internal_messages
+2024-01-08 18:43:59,685 DEBUG   SenderThread:14492 [sender.py:send():380] send: telemetry
+2024-01-08 18:43:59,785 INFO    wandb-upload_0:14492 [upload_job.py:push():131] Uploaded file C:\Users\Maxim\AppData\Local\Temp\tmpmesugzr2wandb\bt6kwz54-wandb-metadata.json
+2024-01-08 18:44:00,069 INFO    Thread-20 :14492 [dir_watcher.py:_on_file_created():271] file/dir created: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\files\output.log
+2024-01-08 18:44:00,069 INFO    Thread-20 :14492 [dir_watcher.py:_on_file_created():271] file/dir created: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\files\wandb-metadata.json
+2024-01-08 18:44:00,070 INFO    Thread-20 :14492 [dir_watcher.py:_on_file_created():271] file/dir created: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\files\requirements.txt
+2024-01-08 18:44:02,082 INFO    Thread-20 :14492 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\files\output.log
+2024-01-08 18:44:03,110 DEBUG   SenderThread:14492 [sender.py:send():380] send: telemetry
+2024-01-08 18:44:03,121 INFO    HandlerThread:14492 [handler.py:handle_tbrecord():764] handling tbrecord: tbrecord {
+  log_dir: "runs\\SAC_38"
+  save: true
+}
+control {
+  relay_id: "e8f0d7f1a7b3477085ab81bde35ec3ad"
+}
+_info {
+  stream_id: "2yq8yqsj"
+}
+
+2024-01-08 18:44:03,121 DEBUG   HandlerThread:14492 [config_util.py:dict_from_config_file():101] no default config file found in config-defaults.yaml
+2024-01-08 18:44:03,425 DEBUG   SenderThread:14492 [sender.py:send():380] send: tbrecord
+2024-01-08 18:44:03,425 DEBUG   SenderThread:14492 [sender.py:send():380] send: telemetry
+2024-01-08 18:44:03,426 DEBUG   SenderThread:14492 [sender.py:send():380] send: config
+2024-01-08 18:44:03,429 DEBUG   Thread-26 :14492 [tb_watcher.py:_process_events():284] Encountered tensorboard directory watcher error: [WinError 1314] A required privilege is not held by the client: 'G:\\Projects\\AutoNav\\FRCEnv\\runs\\SAC_38\\events.out.tfevents.1704757443.FLIDAR-PC.34468.0' -> 'G:\\Projects\\AutoNav\\FRCEnv\\wandb\\run-20240108_184358-2yq8yqsj\\files\\events.out.tfevents.1704757443.FLIDAR-PC.34468.0'
+2024-01-08 18:44:04,454 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: status_report
+2024-01-08 18:44:06,117 INFO    Thread-20 :14492 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\files\output.log
+2024-01-08 18:44:07,117 DEBUG   SenderThread:14492 [sender.py:send():380] send: exit
+2024-01-08 18:44:07,117 INFO    SenderThread:14492 [sender.py:send_exit():585] handling exit code: 0
+2024-01-08 18:44:07,118 INFO    SenderThread:14492 [sender.py:send_exit():587] handling runtime: 7
+2024-01-08 18:44:07,118 INFO    SenderThread:14492 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-08 18:44:07,119 INFO    SenderThread:14492 [sender.py:send_exit():593] send defer
+2024-01-08 18:44:07,119 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:44:07,119 INFO    HandlerThread:14492 [handler.py:handle_request_defer():172] handle defer: 0
+2024-01-08 18:44:07,120 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:44:07,120 INFO    SenderThread:14492 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-01-08 18:44:07,120 INFO    SenderThread:14492 [sender.py:transition_state():613] send defer: 1
+2024-01-08 18:44:07,121 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:44:07,121 INFO    HandlerThread:14492 [handler.py:handle_request_defer():172] handle defer: 1
+2024-01-08 18:44:07,121 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:44:07,122 INFO    SenderThread:14492 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-01-08 18:44:07,122 INFO    SenderThread:14492 [sender.py:transition_state():613] send defer: 2
+2024-01-08 18:44:07,122 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:44:07,122 INFO    HandlerThread:14492 [handler.py:handle_request_defer():172] handle defer: 2
+2024-01-08 18:44:07,122 INFO    HandlerThread:14492 [system_monitor.py:finish():203] Stopping system monitor
+2024-01-08 18:44:07,123 INFO    HandlerThread:14492 [interfaces.py:finish():202] Joined cpu monitor
+2024-01-08 18:44:07,123 DEBUG   SystemMonitor:14492 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-01-08 18:44:07,135 INFO    HandlerThread:14492 [interfaces.py:finish():202] Joined disk monitor
+2024-01-08 18:44:07,136 DEBUG   SystemMonitor:14492 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-01-08 18:44:07,137 DEBUG   SystemMonitor:14492 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-01-08 18:44:07,137 INFO    Thread-20 :14492 [dir_watcher.py:_on_file_created():271] file/dir created: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\files\wandb-summary.json
+2024-01-08 18:44:07,229 INFO    HandlerThread:14492 [interfaces.py:finish():202] Joined gpu monitor
+2024-01-08 18:44:07,229 INFO    HandlerThread:14492 [interfaces.py:finish():202] Joined memory monitor
+2024-01-08 18:44:07,229 INFO    HandlerThread:14492 [interfaces.py:finish():202] Joined network monitor
+2024-01-08 18:44:07,230 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:44:07,230 INFO    SenderThread:14492 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-01-08 18:44:07,230 INFO    SenderThread:14492 [sender.py:transition_state():613] send defer: 3
+2024-01-08 18:44:07,230 DEBUG   SenderThread:14492 [sender.py:send():380] send: stats
+2024-01-08 18:44:07,231 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:44:07,231 INFO    HandlerThread:14492 [handler.py:handle_request_defer():172] handle defer: 3
+2024-01-08 18:44:07,231 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:44:07,232 INFO    SenderThread:14492 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-01-08 18:44:07,232 INFO    SenderThread:14492 [sender.py:transition_state():613] send defer: 4
+2024-01-08 18:44:07,232 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:44:07,232 INFO    HandlerThread:14492 [handler.py:handle_request_defer():172] handle defer: 4
+2024-01-08 18:44:14,197 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: poll_exit
+2024-01-08 18:44:14,198 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: status_report
+2024-01-08 18:44:14,199 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:44:14,199 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: keepalive
+2024-01-08 18:44:14,200 INFO    SenderThread:14492 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-01-08 18:44:14,200 INFO    SenderThread:14492 [sender.py:transition_state():613] send defer: 5
+2024-01-08 18:44:14,201 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: poll_exit
+2024-01-08 18:44:14,201 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:44:14,201 INFO    HandlerThread:14492 [handler.py:handle_request_defer():172] handle defer: 5
+2024-01-08 18:44:14,202 DEBUG   SenderThread:14492 [sender.py:send():380] send: summary
+2024-01-08 18:44:14,206 INFO    SenderThread:14492 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-01-08 18:44:14,206 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:44:14,207 INFO    SenderThread:14492 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-01-08 18:44:14,207 INFO    SenderThread:14492 [sender.py:transition_state():613] send defer: 6
+2024-01-08 18:44:14,207 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:44:14,207 INFO    HandlerThread:14492 [handler.py:handle_request_defer():172] handle defer: 6
+2024-01-08 18:44:14,208 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:44:14,208 INFO    SenderThread:14492 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-01-08 18:44:14,213 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: status_report
+2024-01-08 18:44:14,519 INFO    SenderThread:14492 [sender.py:transition_state():613] send defer: 7
+2024-01-08 18:44:14,520 DEBUG   HandlerThread:14492 [handler.py:handle_request():146] handle_request: defer
+2024-01-08 18:44:14,520 INFO    HandlerThread:14492 [handler.py:handle_request_defer():172] handle defer: 7
+2024-01-08 18:44:14,520 DEBUG   SenderThread:14492 [sender.py:send_request():407] send_request: defer
+2024-01-08 18:44:14,520 INFO    SenderThread:14492 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-01-08 18:44:15,252 INFO    Thread-20 :14492 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\files\wandb-summary.json
+2024-01-08 18:44:15,255 INFO    Thread-20 :14492 [dir_watcher.py:_on_file_modified():288] file/dir modified: G:\Projects\AutoNav\FRCEnv\wandb\run-20240108_184358-2yq8yqsj\files\config.yaml

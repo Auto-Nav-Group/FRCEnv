@@ -1,0 +1,23 @@
+Using cuda device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Traceback (most recent call last):
+  File "D:/Programs/Jetbrains/SoftwareFiles/apps/PyCharm-P/ch-0/231.9011.38/plugins/python/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "D:\Programs\Jetbrains\SoftwareFiles\apps\PyCharm-P\ch-0\231.9011.38\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "G:\Projects\AutoNav\FRCEnv\test-sac.py", line 30, in <module>
+    model.learn(int(LEARNING_STEPS), callback=WandbCallback())
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\sac\sac.py", line 307, in learn
+    return super().learn(
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\off_policy_algorithm.py", line 314, in learn
+    total_timesteps, callback = self._setup_learn(
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\off_policy_algorithm.py", line 297, in _setup_learn
+    return super()._setup_learn(
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\base_class.py", line 423, in _setup_learn
+    self._last_obs = self.env.reset()  # type: ignore[assignment]
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 78, in reset
+    self._save_obs(env_idx, obs)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 110, in _save_obs
+    self.buf_obs[key][env_idx] = obs[key]  # type: ignore[call-overload]
+ValueError: could not broadcast input array from shape (93,) into shape (112,)

@@ -1,0 +1,273 @@
+Using cuda device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Logging to runs\SAC_106
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 29.2     |
+|    ep_rew_mean     | -60.7    |
+|    success_rate    | 0.25     |
+| time/              |          |
+|    episodes        | 4        |
+|    fps             | 31       |
+|    time_elapsed    | 3        |
+|    total_timesteps | 117      |
+| train/             |          |
+|    actor_loss      | 51.7     |
+|    critic_loss     | 400      |
+|    ent_coef        | 1.01     |
+|    ent_coef_loss   | -0.263   |
+|    learning_rate   | 0.001    |
+|    n_updates       | 16       |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 18.5     |
+|    ep_rew_mean     | -52.6    |
+|    success_rate    | 0.125    |
+| time/              |          |
+|    episodes        | 8        |
+|    fps             | 15       |
+|    time_elapsed    | 9        |
+|    total_timesteps | 148      |
+| train/             |          |
+|    actor_loss      | 91.9     |
+|    critic_loss     | 158      |
+|    ent_coef        | 1.04     |
+|    ent_coef_loss   | -0.824   |
+|    learning_rate   | 0.001    |
+|    n_updates       | 47       |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 15.2     |
+|    ep_rew_mean     | -49.5    |
+|    success_rate    | 0.0833   |
+| time/              |          |
+|    episodes        | 12       |
+|    fps             | 11       |
+|    time_elapsed    | 16       |
+|    total_timesteps | 182      |
+| train/             |          |
+|    actor_loss      | 123      |
+|    critic_loss     | 126      |
+|    ent_coef        | 1.08     |
+|    ent_coef_loss   | -1.44    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 81       |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 95.6     |
+|    ep_rew_mean     | -186     |
+|    success_rate    | 0.125    |
+| time/              |          |
+|    episodes        | 16       |
+|    fps             | 5        |
+|    time_elapsed    | 296      |
+|    total_timesteps | 1530     |
+| train/             |          |
+|    actor_loss      | 1.68e+03 |
+|    critic_loss     | 1.16e+04 |
+|    ent_coef        | 4.14     |
+|    ent_coef_loss   | -26.6    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 1429     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 78.3     |
+|    ep_rew_mean     | -157     |
+|    success_rate    | 0.1      |
+| time/              |          |
+|    episodes        | 20       |
+|    fps             | 5        |
+|    time_elapsed    | 304      |
+|    total_timesteps | 1567     |
+| train/             |          |
+|    actor_loss      | 1.82e+03 |
+|    critic_loss     | 2.91e+04 |
+|    ent_coef        | 4.3      |
+|    ent_coef_loss   | -27.4    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 1466     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 67.1     |
+|    ep_rew_mean     | -138     |
+|    success_rate    | 0.0833   |
+| time/              |          |
+|    episodes        | 24       |
+|    fps             | 5        |
+|    time_elapsed    | 312      |
+|    total_timesteps | 1610     |
+| train/             |          |
+|    actor_loss      | 2.04e+03 |
+|    critic_loss     | 1.23e+04 |
+|    ent_coef        | 4.49     |
+|    ent_coef_loss   | -28.2    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 1509     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 64.6     |
+|    ep_rew_mean     | -132     |
+|    success_rate    | 0.107    |
+| time/              |          |
+|    episodes        | 28       |
+|    fps             | 5        |
+|    time_elapsed    | 352      |
+|    total_timesteps | 1809     |
+| train/             |          |
+|    actor_loss      | 2.97e+03 |
+|    critic_loss     | 1.48e+04 |
+|    ent_coef        | 5.48     |
+|    ent_coef_loss   | -31.8    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 1708     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 63       |
+|    ep_rew_mean     | -130     |
+|    success_rate    | 0.0938   |
+| time/              |          |
+|    episodes        | 32       |
+|    fps             | 5        |
+|    time_elapsed    | 392      |
+|    total_timesteps | 2016     |
+| train/             |          |
+|    actor_loss      | 4.04e+03 |
+|    critic_loss     | 7.06e+04 |
+|    ent_coef        | 6.74     |
+|    ent_coef_loss   | -35.8    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 1915     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 56.5     |
+|    ep_rew_mean     | -119     |
+|    success_rate    | 0.0833   |
+| time/              |          |
+|    episodes        | 36       |
+|    fps             | 5        |
+|    time_elapsed    | 396      |
+|    total_timesteps | 2035     |
+| train/             |          |
+|    actor_loss      | 4.1e+03  |
+|    critic_loss     | 5.79e+04 |
+|    ent_coef        | 6.87     |
+|    ent_coef_loss   | -36.1    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 1934     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 62.8     |
+|    ep_rew_mean     | -129     |
+|    success_rate    | 0.075    |
+| time/              |          |
+|    episodes        | 40       |
+|    fps             | 4        |
+|    time_elapsed    | 502      |
+|    total_timesteps | 2510     |
+| train/             |          |
+|    actor_loss      | 7.35e+03 |
+|    critic_loss     | 1.1e+05  |
+|    ent_coef        | 11       |
+|    ent_coef_loss   | -44.8    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 2409     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 58.2     |
+|    ep_rew_mean     | -121     |
+|    success_rate    | 0.0682   |
+| time/              |          |
+|    episodes        | 44       |
+|    fps             | 4        |
+|    time_elapsed    | 514      |
+|    total_timesteps | 2561     |
+| train/             |          |
+|    actor_loss      | 7.91e+03 |
+|    critic_loss     | 1.09e+05 |
+|    ent_coef        | 11.6     |
+|    ent_coef_loss   | -45.8    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 2460     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 57       |
+|    ep_rew_mean     | -120     |
+|    success_rate    | 0.0625   |
+| time/              |          |
+|    episodes        | 48       |
+|    fps             | 4        |
+|    time_elapsed    | 553      |
+|    total_timesteps | 2738     |
+| train/             |          |
+|    actor_loss      | 9.35e+03 |
+|    critic_loss     | 1.74e+05 |
+|    ent_coef        | 13.9     |
+|    ent_coef_loss   | -49.2    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 2637     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 53       |
+|    ep_rew_mean     | -114     |
+|    success_rate    | 0.0577   |
+| time/              |          |
+|    episodes        | 52       |
+|    fps             | 4        |
+|    time_elapsed    | 557      |
+|    total_timesteps | 2756     |
+| train/             |          |
+|    actor_loss      | 9.44e+03 |
+|    critic_loss     | 2.47e+05 |
+|    ent_coef        | 14.1     |
+|    ent_coef_loss   | -49.4    |
+|    learning_rate   | 0.001    |
+|    n_updates       | 2655     |
+---------------------------------
+Traceback (most recent call last):
+  File "G:\Projects\AutoNav\FRCEnv\test-sac.py", line 30, in <module>
+    model.learn(int(LEARNING_STEPS), callback=WandbCallback())
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\sac\sac.py", line 307, in learn
+    return super().learn(
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\off_policy_algorithm.py", line 347, in learn
+    self.train(batch_size=self.batch_size, gradient_steps=gradient_steps)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\sac\sac.py", line 258, in train
+    current_q_values = self.critic(replay_data.observations, replay_data.actions)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\policies.py", line 975, in forward
+    return tuple(q_net(qvalue_input) for q_net in self.q_networks)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\policies.py", line 975, in <genexpr>
+    return tuple(q_net(qvalue_input) for q_net in self.q_networks)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\torch\nn\modules\container.py", line 215, in forward
+    input = module(input)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\torch\nn\modules\linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\torch\fx\traceback.py", line 68, in format_stack
+    return traceback.format_list(traceback.extract_stack()[:-1])
+  File "C:\Program Files\Python38\lib\traceback.py", line 211, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+  File "C:\Program Files\Python38\lib\traceback.py", line 362, in extract
+    linecache.checkcache(filename)

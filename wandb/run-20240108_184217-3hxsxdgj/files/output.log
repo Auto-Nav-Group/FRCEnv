@@ -1,0 +1,19 @@
+Using cuda device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Logging to runs\SAC_35
+Traceback (most recent call last):
+  File "D:/Programs/Jetbrains/SoftwareFiles/apps/PyCharm-P/ch-0/231.9011.38/plugins/python/helpers/pydev/pydevd.py", line 1496, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "D:\Programs\Jetbrains\SoftwareFiles\apps\PyCharm-P\ch-0\231.9011.38\plugins\python\helpers\pydev\_pydev_imps\_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "G:\Projects\AutoNav\FRCEnv\test-sac.py", line 29, in <module>
+    model.learn(int(LEARNING_STEPS), callback=WandbCallback(gradient_save_freq=1000))
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\sac\sac.py", line 307, in learn
+    return super().learn(
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\off_policy_algorithm.py", line 347, in learn
+    self.train(batch_size=self.batch_size, gradient_steps=gradient_steps)
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\sac\sac.py", line 215, in train
+    replay_data = self.replay_buffer.sample(batch_size, env=self._vec_normalize_env)  # type: ignore[union-attr]
+  File "G:\Projects\AutoNav\FRCEnv\her_replay.py", line 198, in sample
+    raise RuntimeError(

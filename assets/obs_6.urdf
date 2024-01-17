@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="obs_6">
+  <link name="obs_6">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision>
+      <origin rpy="0 0 0" xyz="6.85465185 1.2703489999999995 0"/>
+      <geometry>
+        <box size="1.2906977 4.9709306 5"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin rpy="0 0 0" xyz="6.85465185 1.2703489999999995 0"/>
+      <geometry>
+        <box size="1.2906977 4.9709306 5"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+</robot>

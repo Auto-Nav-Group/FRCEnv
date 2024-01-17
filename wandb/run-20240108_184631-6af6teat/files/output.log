@@ -1,0 +1,93 @@
+Using cuda device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Logging to runs\SAC_42
+----------------------------------
+| rollout/           |           |
+|    ep_len_mean     | 92.5      |
+|    ep_rew_mean     | -88.8     |
+|    success_rate    | 0         |
+| time/              |           |
+|    episodes        | 4         |
+|    fps             | 7         |
+|    time_elapsed    | 52        |
+|    total_timesteps | 370       |
+| train/             |           |
+|    actor_loss      | -1.57     |
+|    critic_loss     | 2.34      |
+|    ent_coef        | 1         |
+|    ent_coef_loss   | -0.000907 |
+|    learning_rate   | 1e-06     |
+|    n_updates       | 269       |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 88.5     |
+|    ep_rew_mean     | -125     |
+|    success_rate    | 0        |
+| time/              |          |
+|    episodes        | 8        |
+|    fps             | 5        |
+|    time_elapsed    | 122      |
+|    total_timesteps | 708      |
+| train/             |          |
+|    actor_loss      | -2.19    |
+|    critic_loss     | 2.1      |
+|    ent_coef        | 0.999    |
+|    ent_coef_loss   | -0.00204 |
+|    learning_rate   | 1e-06    |
+|    n_updates       | 607      |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 108      |
+|    ep_rew_mean     | -154     |
+|    success_rate    | 0.167    |
+| time/              |          |
+|    episodes        | 12       |
+|    fps             | 5        |
+|    time_elapsed    | 235      |
+|    total_timesteps | 1290     |
+| train/             |          |
+|    actor_loss      | -3.42    |
+|    critic_loss     | 1.53     |
+|    ent_coef        | 0.999    |
+|    ent_coef_loss   | -0.00401 |
+|    learning_rate   | 1e-06    |
+|    n_updates       | 1189     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 97.8     |
+|    ep_rew_mean     | -142     |
+|    success_rate    | 0.125    |
+| time/              |          |
+|    episodes        | 16       |
+|    fps             | 5        |
+|    time_elapsed    | 286      |
+|    total_timesteps | 1565     |
+| train/             |          |
+|    actor_loss      | -4.3     |
+|    critic_loss     | 1.46     |
+|    ent_coef        | 0.999    |
+|    ent_coef_loss   | -0.00492 |
+|    learning_rate   | 1e-06    |
+|    n_updates       | 1464     |
+---------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 137      |
+|    ep_rew_mean     | -227     |
+|    success_rate    | 0.15     |
+| time/              |          |
+|    episodes        | 20       |
+|    fps             | 5        |
+|    time_elapsed    | 524      |
+|    total_timesteps | 2734     |
+| train/             |          |
+|    actor_loss      | -9.33    |
+|    critic_loss     | 1.87     |
+|    ent_coef        | 0.997    |
+|    ent_coef_loss   | -0.00886 |
+|    learning_rate   | 1e-06    |
+|    n_updates       | 2633     |

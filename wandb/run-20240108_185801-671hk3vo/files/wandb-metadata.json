@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.2",
+    "heartbeatAt": "2024-01-08T23:58:02.815551",
+    "startedAt": "2024-01-08T23:58:01.955504",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "G:\\Projects\\AutoNav\\FRCEnv\\test-sac.py",
+    "codePathLocal": "test-sac.py",
+    "codePath": "test-sac.py",
+    "git": {
+        "remote": "https://github.com/Auto-Nav-Group/FRCEnv.git",
+        "commit": "98fce8ddfcd888cb5a259e4592ccbc2181adb2b0"
+    },
+    "email": "74438588+TreeBronch@users.noreply.github.com",
+    "root": "G:/Projects/AutoNav/FRCEnv",
+    "host": "FLIDAR-PC",
+    "username": "Maxim",
+    "executable": "C:\\Program Files\\Python38\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 4200.0,
+        "min": 0.0,
+        "max": 4200.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4200.0,
+            "min": 0.0,
+            "max": 4200.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 931.5107383728027,
+            "used": 742.1291656494141
+        }
+    },
+    "gpu": "NVIDIA TITAN X (Pascal)",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA TITAN X (Pascal)",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 63.964080810546875
+    }
+}

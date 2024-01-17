@@ -1,0 +1,19 @@
+Using cuda device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+Traceback (most recent call last):
+  File "G:\Projects\AutoNav\FRCEnv\test-sac.py", line 22, in <module>
+    model = SAC('MultiInputPolicy', env, replay_buffer_class=HerReplayBuffer,
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\sac\sac.py", line 157, in __init__
+    self._setup_model()
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\sac\sac.py", line 160, in _setup_model
+    super()._setup_model()
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\common\off_policy_algorithm.py", line 189, in _setup_model
+    self.replay_buffer = self.replay_buffer_class(
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\her\her_replay_buffer.py", line 92, in __init__
+    self.infos = np.array([[{} for _ in range(self.n_envs)] for _ in range(self.buffer_size)])
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\her\her_replay_buffer.py", line 92, in <listcomp>
+    self.infos = np.array([[{} for _ in range(self.n_envs)] for _ in range(self.buffer_size)])
+  File "C:\Users\Maxim\AppData\Roaming\Python\Python38\site-packages\stable_baselines3\her\her_replay_buffer.py", line 92, in <listcomp>
+    self.infos = np.array([[{} for _ in range(self.n_envs)] for _ in range(self.buffer_size)])
+KeyboardInterrupt

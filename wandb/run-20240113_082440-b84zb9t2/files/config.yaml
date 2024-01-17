@@ -1,0 +1,339 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.2
+    cli_version: 0.15.12
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1705152280.341628
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 1
+      - 22
+      - 23
+      - 35
+      4: 3.8.2
+      5: 0.15.12
+      8:
+      - 3
+      - 5
+      13: windows-amd64
+algo:
+  desc: null
+  value: SAC
+policy_class:
+  desc: null
+  value: <class 'stable_baselines3.sac.policies.MultiInputPolicy'>
+device:
+  desc: null
+  value: cuda
+verbose:
+  desc: null
+  value: 1
+policy_kwargs:
+  desc: null
+  value: '{''net_arch'': [512, 512, 512, 512], ''use_sde'': False}'
+num_timesteps:
+  desc: null
+  value: 0
+_total_timesteps:
+  desc: null
+  value: 150000
+_num_timesteps_at_start:
+  desc: null
+  value: 0
+seed:
+  desc: null
+  value: None
+action_noise:
+  desc: null
+  value: None
+start_time:
+  desc: null
+  value: 1705152284173158200
+learning_rate:
+  desc: null
+  value: 0.001
+tensorboard_log:
+  desc: null
+  value: runs
+_last_obs:
+  desc: null
+  value: "OrderedDict([('achieved_goal', array([[-6.04451418e-01,  4.24175620e-01,\
+    \  1.99825302e-01,\n         2.41872311e-01, -7.21511841e-01, -1.13947198e-01,\n\
+    \         0.00000000e+00,  0.00000000e+00,  9.99126509e-02,\n         1.20936155e-01,\
+    \  0.00000000e+00,  0.00000000e+00,\n         1.79973792e-03,  1.80329639e-03,\
+    \  1.00000000e+00,\n         1.83219113e-03,  1.85811403e-03,  1.89235643e-03,\n\
+    \         1.93566736e-03,  1.98904076e-03,  1.80447113e-03,\n         1.62237242e-03,\
+    \  1.47895957e-03,  1.36378710e-03,\n         1.26990618e-03,  1.00000000e+00,\
+    \  1.12822279e-03,\n         1.00000000e+00,  1.02958886e-03,  9.92016401e-04,\n\
+    \         9.60747828e-04,  9.34967306e-04,  9.14047298e-04,\n         8.97507474e-04,\
+    \  8.84986133e-04,  1.00000000e+00,\n         8.71029391e-04,  1.00000000e+00,\
+    \  8.71029391e-04,\n         8.76219885e-04,  8.84986133e-04,  1.00000000e+00,\n\
+    \         1.00000000e+00,  1.00000000e+00,  9.60747828e-04,\n         1.00000000e+00,\
+    \  1.02958886e-03,  1.07452704e-03,\n         1.12822279e-03,  1.00000000e+00,\
+    \  1.00000000e+00,\n         1.36378710e-03,  1.47895957e-03,  1.42129383e-03,\n\
+    \         1.36942696e-03,  1.32626237e-03,  1.29067362e-03,\n         1.26179471e-03,\
+    \  1.23896229e-03,  1.22167729e-03,\n         1.20957592e-03,  1.20241067e-03,\
+    \  1.20003801e-03,\n         1.20241067e-03,  1.20957592e-03,  1.22167729e-03,\n\
+    \         1.23896229e-03,  1.26179471e-03,  1.29067362e-03,\n         1.24586932e-03,\
+    \  1.10111327e-03,  9.89994151e-04,\n         9.02481610e-04,  8.32201797e-04,\
+    \  7.74914341e-04,\n         7.27693026e-04,  6.88457163e-04,  6.55691256e-04,\n\
+    \         6.28269394e-04,  6.05342153e-04,  5.86261624e-04,\n         5.70530014e-04,\
+    \  5.57764317e-04,  5.47671458e-04,\n         5.40030829e-04,  5.34681487e-04,\
+    \  5.31514175e-04,\n         5.30465390e-04,  5.31514175e-04,  5.34681487e-04,\n\
+    \         5.40030829e-04,  5.47671458e-04,  5.57764317e-04,\n         5.70530014e-04,\
+    \  5.86261624e-04,  6.05342153e-04,\n         6.28269394e-04,  6.55691256e-04,\
+    \  6.88457163e-04,\n         7.27693026e-04,  7.74914341e-04,  8.32201797e-04,\n\
+    \         9.02481610e-04,  9.89994151e-04,  1.10111327e-03,\n         1.24586932e-03,\
+    \  1.44099433e-03,  1.71727512e-03,\n         1.85811403e-03,  1.83219113e-03,\
+    \  1.00000000e+00,\n         1.80329639e-03]], dtype=float32)), ('desired_goal',\
+    \ array([[0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 1., 0., 0., 0., 0.,\n  \
+    \      0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n     \
+    \   0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n        0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n        0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n        0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,\n        0., 0., 0., 0.,\
+    \ 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]],\n      dtype=float32)), ('observation',\
+    \ array([[-6.04451418e-01,  4.24175620e-01,  1.99825302e-01,\n         2.41872311e-01,\
+    \ -7.21511841e-01, -1.13947198e-01,\n         0.00000000e+00,  0.00000000e+00,\
+    \  9.99126509e-02,\n         1.20936155e-01,  0.00000000e+00,  0.00000000e+00,\n\
+    \         1.79973792e-03,  1.80329639e-03,  1.00000000e+00,\n         1.83219113e-03,\
+    \  1.85811403e-03,  1.89235643e-03,\n         1.93566736e-03,  1.98904076e-03,\
+    \  1.80447113e-03,\n         1.62237242e-03,  1.47895957e-03,  1.36378710e-03,\n\
+    \         1.26990618e-03,  1.00000000e+00,  1.12822279e-03,\n         1.00000000e+00,\
+    \  1.02958886e-03,  9.92016401e-04,\n         9.60747828e-04,  9.34967306e-04,\
+    \  9.14047298e-04,\n         8.97507474e-04,  8.84986133e-04,  1.00000000e+00,\n\
+    \         8.71029391e-04,  1.00000000e+00,  8.71029391e-04,\n         8.76219885e-04,\
+    \  8.84986133e-04,  1.00000000e+00,\n         1.00000000e+00,  1.00000000e+00,\
+    \  9.60747828e-04,\n         1.00000000e+00,  1.02958886e-03,  1.07452704e-03,\n\
+    \         1.12822279e-03,  1.00000000e+00,  1.00000000e+00,\n         1.36378710e-03,\
+    \  1.47895957e-03,  1.42129383e-03,\n         1.36942696e-03,  1.32626237e-03,\
+    \  1.29067362e-03,\n         1.26179471e-03,  1.23896229e-03,  1.22167729e-03,\n\
+    \         1.20957592e-03,  1.20241067e-03,  1.20003801e-03,\n         1.20241067e-03,\
+    \  1.20957592e-03,  1.22167729e-03,\n         1.23896229e-03,  1.26179471e-03,\
+    \  1.29067362e-03,\n         1.24586932e-03,  1.10111327e-03,  9.89994151e-04,\n\
+    \         9.02481610e-04,  8.32201797e-04,  7.74914341e-04,\n         7.27693026e-04,\
+    \  6.88457163e-04,  6.55691256e-04,\n         6.28269394e-04,  6.05342153e-04,\
+    \  5.86261624e-04,\n         5.70530014e-04,  5.57764317e-04,  5.47671458e-04,\n\
+    \         5.40030829e-04,  5.34681487e-04,  5.31514175e-04,\n         5.30465390e-04,\
+    \  5.31514175e-04,  5.34681487e-04,\n         5.40030829e-04,  5.47671458e-04,\
+    \  5.57764317e-04,\n         5.70530014e-04,  5.86261624e-04,  6.05342153e-04,\n\
+    \         6.28269394e-04,  6.55691256e-04,  6.88457163e-04,\n         7.27693026e-04,\
+    \  7.74914341e-04,  8.32201797e-04,\n         9.02481610e-04,  9.89994151e-04,\
+    \  1.10111327e-03,\n         1.24586932e-03,  1.44099433e-03,  1.71727512e-03,\n\
+    \         1.85811403e-03,  1.83219113e-03,  1.00000000e+00,\n         1.80329639e-03]],\
+    \ dtype=float32))])"
+_last_episode_starts:
+  desc: null
+  value: '[ True]'
+_last_original_obs:
+  desc: null
+  value: None
+_episode_num:
+  desc: null
+  value: 0
+use_sde:
+  desc: null
+  value: 'False'
+sde_sample_freq:
+  desc: null
+  value: -1
+_current_progress_remaining:
+  desc: null
+  value: 1.0
+_stats_window_size:
+  desc: null
+  value: 100
+ep_info_buffer:
+  desc: null
+  value: deque([], maxlen=100)
+ep_success_buffer:
+  desc: null
+  value: deque([], maxlen=100)
+_n_updates:
+  desc: null
+  value: 0
+_custom_logger:
+  desc: null
+  value: 'False'
+env:
+  desc: null
+  value: <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x00000249CEE8DF10>
+_vec_normalize_env:
+  desc: null
+  value: None
+observation_space:
+  desc: null
+  value: 'Dict(''achieved_goal'': Box(-1.0, 1.0, (112,), float32), ''desired_goal'':
+    Box(-1.0, 1.0, (112,), float32), ''observation'': Box(-1.0, 1.0, (112,), float32))'
+action_space:
+  desc: null
+  value: Box(-1.0, 1.0, (2,), float32)
+n_envs:
+  desc: null
+  value: 1
+buffer_size:
+  desc: null
+  value: 1000000
+batch_size:
+  desc: null
+  value: 1024
+learning_starts:
+  desc: null
+  value: 100
+tau:
+  desc: null
+  value: 0.05
+gamma:
+  desc: null
+  value: 0.99
+gradient_steps:
+  desc: null
+  value: 1
+optimize_memory_usage:
+  desc: null
+  value: 'False'
+replay_buffer:
+  desc: null
+  value: <stable_baselines3.her.her_replay_buffer.HerReplayBuffer object at 0x00000249CEF1BF70>
+replay_buffer_class:
+  desc: null
+  value: <class 'stable_baselines3.her.her_replay_buffer.HerReplayBuffer'>
+replay_buffer_kwargs:
+  desc: null
+  value: '{''n_sampled_goal'': 4, ''goal_selection_strategy'': ''future'', ''env'':
+    <frcenv.FRCEnv object at 0x00000249BD960D00>}'
+_episode_storage:
+  desc: null
+  value: None
+train_freq:
+  desc: null
+  value: 'TrainFreq(frequency=1, unit=<TrainFrequencyUnit.STEP: ''step''>)'
+use_sde_at_warmup:
+  desc: null
+  value: 'False'
+target_entropy:
+  desc: null
+  value: -2.0
+log_ent_coef:
+  desc: null
+  value: tensor([0.], device='cuda:0', requires_grad=True)
+ent_coef:
+  desc: null
+  value: auto
+target_update_interval:
+  desc: null
+  value: 1
+ent_coef_optimizer:
+  desc: null
+  value: "Adam (\nParameter Group 0\n    amsgrad: False\n    betas: (0.9, 0.999)\n\
+    \    capturable: False\n    differentiable: False\n    eps: 1e-08\n    foreach:\
+    \ None\n    fused: None\n    lr: 0.001\n    maximize: False\n    weight_decay:\
+    \ 0\n)"
+lr_schedule:
+  desc: null
+  value: <function constant_fn.<locals>.func at 0x00000249CEE67790>
+policy:
+  desc: null
+  value: "MultiInputPolicy(\n  (actor): Actor(\n    (features_extractor): CombinedExtractor(\n\
+    \      (extractors): ModuleDict(\n        (achieved_goal): Flatten(start_dim=1,\
+    \ end_dim=-1)\n        (desired_goal): Flatten(start_dim=1, end_dim=-1)\n    \
+    \    (observation): Flatten(start_dim=1, end_dim=-1)\n      )\n    )\n    (latent_pi):\
+    \ Sequential(\n      (0): Linear(in_features=336, out_features=512, bias=True)\n\
+    \      (1): ReLU()\n      (2): Linear(in_features=512, out_features=512, bias=True)\n\
+    \      (3): ReLU()\n      (4): Linear(in_features=512, out_features=512, bias=True)\n\
+    \      (5): ReLU()\n      (6): Linear(in_features=512, out_features=512, bias=True)\n\
+    \      (7): ReLU()\n    )\n    (mu): Linear(in_features=512, out_features=2, bias=True)\n\
+    \    (log_std): Linear(in_features=512, out_features=2, bias=True)\n  )\n  (critic):\
+    \ ContinuousCritic(\n    (features_extractor): CombinedExtractor(\n      (extractors):\
+    \ ModuleDict(\n        (achieved_goal): Flatten(start_dim=1, end_dim=-1)\n   \
+    \     (desired_goal): Flatten(start_dim=1, end_dim=-1)\n        (observation):\
+    \ Flatten(start_dim=1, end_dim=-1)\n      )\n    )\n    (qf0): Sequential(\n \
+    \     (0): Linear(in_features=338, out_features=512, bias=True)\n      (1): ReLU()\n\
+    \      (2): Linear(in_features=512, out_features=512, bias=True)\n      (3): ReLU()\n\
+    \      (4): Linear(in_features=512, out_features=512, bias=True)\n      (5): ReLU()\n\
+    \      (6): Linear(in_features=512, out_features=512, bias=True)\n      (7): ReLU()\n\
+    \      (8): Linear(in_features=512, out_features=1, bias=True)\n    )\n    (qf1):\
+    \ Sequential(\n      (0): Linear(in_features=338, out_features=512, bias=True)\n\
+    \      (1): ReLU()\n      (2): Linear(in_features=512, out_features=512, bias=True)\n\
+    \      (3): ReLU()\n      (4): Linear(in_features=512, out_features=512, bias=True)\n\
+    \      (5): ReLU()\n      (6): Linear(in_features=512, out_features=512, bias=True)\n\
+    \      (7): ReLU()\n      (8): Linear(in_features=512, out_features=1, bias=True)\n\
+    \    )\n  )\n  (critic_target): ContinuousCritic(\n    (features_extractor): CombinedExtractor(\n\
+    \      (extractors): ModuleDict(\n        (achieved_goal): Flatten(start_dim=1,\
+    \ end_dim=-1)\n        (desired_goal): Flatten(start_dim=1, end_dim=-1)\n    \
+    \    (observation): Flatten(start_dim=1, end_dim=-1)\n      )\n    )\n    (qf0):\
+    \ Sequential(\n      (0): Linear(in_features=338, out_features=512, bias=True)\n\
+    \      (1): ReLU()\n      (2): Linear(in_features=512, out_features=512, bias=True)\n\
+    \      (3): ReLU()\n      (4): Linear(in_features=512, out_features=512, bias=True)\n\
+    \      (5): ReLU()\n      (6): Linear(in_features=512, out_features=512, bias=True)\n\
+    \      (7): ReLU()\n      (8): Linear(in_features=512, out_features=1, bias=True)\n\
+    \    )\n    (qf1): Sequential(\n      (0): Linear(in_features=338, out_features=512,\
+    \ bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=512, out_features=512,\
+    \ bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=512, out_features=512,\
+    \ bias=True)\n      (5): ReLU()\n      (6): Linear(in_features=512, out_features=512,\
+    \ bias=True)\n      (7): ReLU()\n      (8): Linear(in_features=512, out_features=1,\
+    \ bias=True)\n    )\n  )\n)"
+actor:
+  desc: null
+  value: "Actor(\n  (features_extractor): CombinedExtractor(\n    (extractors): ModuleDict(\n\
+    \      (achieved_goal): Flatten(start_dim=1, end_dim=-1)\n      (desired_goal):\
+    \ Flatten(start_dim=1, end_dim=-1)\n      (observation): Flatten(start_dim=1,\
+    \ end_dim=-1)\n    )\n  )\n  (latent_pi): Sequential(\n    (0): Linear(in_features=336,\
+    \ out_features=512, bias=True)\n    (1): ReLU()\n    (2): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (3): ReLU()\n    (4): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (5): ReLU()\n    (6): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (7): ReLU()\n  )\n  (mu): Linear(in_features=512,\
+    \ out_features=2, bias=True)\n  (log_std): Linear(in_features=512, out_features=2,\
+    \ bias=True)\n)"
+critic:
+  desc: null
+  value: "ContinuousCritic(\n  (features_extractor): CombinedExtractor(\n    (extractors):\
+    \ ModuleDict(\n      (achieved_goal): Flatten(start_dim=1, end_dim=-1)\n     \
+    \ (desired_goal): Flatten(start_dim=1, end_dim=-1)\n      (observation): Flatten(start_dim=1,\
+    \ end_dim=-1)\n    )\n  )\n  (qf0): Sequential(\n    (0): Linear(in_features=338,\
+    \ out_features=512, bias=True)\n    (1): ReLU()\n    (2): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (3): ReLU()\n    (4): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (5): ReLU()\n    (6): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (7): ReLU()\n    (8): Linear(in_features=512,\
+    \ out_features=1, bias=True)\n  )\n  (qf1): Sequential(\n    (0): Linear(in_features=338,\
+    \ out_features=512, bias=True)\n    (1): ReLU()\n    (2): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (3): ReLU()\n    (4): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (5): ReLU()\n    (6): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (7): ReLU()\n    (8): Linear(in_features=512,\
+    \ out_features=1, bias=True)\n  )\n)"
+critic_target:
+  desc: null
+  value: "ContinuousCritic(\n  (features_extractor): CombinedExtractor(\n    (extractors):\
+    \ ModuleDict(\n      (achieved_goal): Flatten(start_dim=1, end_dim=-1)\n     \
+    \ (desired_goal): Flatten(start_dim=1, end_dim=-1)\n      (observation): Flatten(start_dim=1,\
+    \ end_dim=-1)\n    )\n  )\n  (qf0): Sequential(\n    (0): Linear(in_features=338,\
+    \ out_features=512, bias=True)\n    (1): ReLU()\n    (2): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (3): ReLU()\n    (4): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (5): ReLU()\n    (6): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (7): ReLU()\n    (8): Linear(in_features=512,\
+    \ out_features=1, bias=True)\n  )\n  (qf1): Sequential(\n    (0): Linear(in_features=338,\
+    \ out_features=512, bias=True)\n    (1): ReLU()\n    (2): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (3): ReLU()\n    (4): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (5): ReLU()\n    (6): Linear(in_features=512,\
+    \ out_features=512, bias=True)\n    (7): ReLU()\n    (8): Linear(in_features=512,\
+    \ out_features=1, bias=True)\n  )\n)"
+batch_norm_stats:
+  desc: null
+  value: '[]'
+batch_norm_stats_target:
+  desc: null
+  value: '[]'
+_logger:
+  desc: null
+  value: <stable_baselines3.common.logger.Logger object at 0x0000024A5C2C8F10>

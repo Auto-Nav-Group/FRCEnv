@@ -1,0 +1,21 @@
+[
+  {
+    "sizex": 15,
+    "sizey": 7,
+    "displayedImgPath": "G:\\Projects\\AutoNav\\AutoNavEditor\\SampleField.png",
+    "robotWidth": 1,
+    "robotHeight": 1
+  },
+  [
+    [
+      {
+        "name": "N/A",
+        "width": 5.0625,
+        "height": 2.7539062,
+        "rotationangle": 0,
+        "locationx": 5.71875,
+        "locationy": 2.2851562
+      }
+    ]
+  ]
+]
