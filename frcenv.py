@@ -27,7 +27,7 @@ class FRCEnv(gym.Env):
 
         self.state = None
         self.reward_weights = [
-            -0.25, -0.25, -0, -0, -0, -0, -0.25, -0.25, -0, -0, -100, 100
+            -0.25, -0.25, -0, -0, -0, -0, -0.25, 0, -0, -0, -100, 100
         ]+self.internal_env.lidar_zeros
 
         self.top_reward = -math.inf

@@ -8,10 +8,13 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #from her_replay import HerReplayBuffer
-from stable_baselines3 import SAC
+from mixed_precision_sac import SAC
 from stable_baselines3.her.her_replay_buffer import HerReplayBuffer
 
-LEARNING_STEPS = 150000
+th.backends.cuda.matmul.allow_tf32 = True
+th.backends.cudnn.allow_tf32 = True
+
+LEARNING_STEPS = 5000
 
 env = FRCEnv()
 
@@ -25,7 +28,8 @@ model = SAC('MultiInputPolicy', env, replay_buffer_class=HerReplayBuffer,
             buffer_size=int(1e6),
             learning_rate=1e-3,
             gamma=0.99, batch_size=1024, tau=0.05,
-            policy_kwargs=dict(net_arch=[512, 512, 512, 512]))
+            policy_kwargs=dict(net_arch=[512, 512, 512, 512, 512, 512]),
+            use_amp=True)
 
 model.learn(int(LEARNING_STEPS))#, callback=WandbCallback(gradient_save_freq=1000, model_save_path=f"models/{run.id}"))
 model.save("G:/Projects/AutoNav/FRCEnv/out/sac.zip")
