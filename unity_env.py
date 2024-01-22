@@ -13,7 +13,7 @@ class FRCEngine:
         self.height = sizeinfo[1]
         self.max_mes = sizeinfo[2]
         self.lidar_zeros = [0 for i in range(self.state_size-12)]
-        self.target = [0,0,0,0,0,0,0,1,0,0, 0, 0] + self.lidar_zeros
+        self.target = [0,0,0,0,0,0,0,0,0,0, 0, 0] + self.lidar_zeros
         self.int2bool = lambda x: True if x==1 else False
 
     def get_size_info(self):
