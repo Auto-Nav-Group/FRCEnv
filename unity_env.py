@@ -1,5 +1,7 @@
+import numpy as np
 import requests
 import json
+from multiprocessing import shared_memory
 
 
 class FRCEngine:
@@ -15,6 +17,22 @@ class FRCEngine:
         self.lidar_zeros = [0 for i in range(self.state_size-12)]
         self.target = [0,0,0,0,0,0,0,0,0,0, 0, 0] + self.lidar_zeros
         self.int2bool = lambda x: True if x==1 else False
+        self.use_shm = False
+        self.mem_id_in = ""
+        self.mem_id_out = ""
+        self.shm_in = None
+        self.shm_out = None
+        self.shm_len = 112
+        if self.use_shm:
+            self._setup()
+
+    def _setup(self):
+        response = requests.get(self.url+"/getmeminfo")
+        j = response.json()["Items"]
+        self.mem_id_in = j[0]
+        self.mem_id_out = j[1]
+        self.shm_in = shared_memory.SharedMemory(name=self.mem_id_in)
+        self.shm_out = shared_memory.SharedMemory(name=self.mem_id_out)
 
     def get_size_info(self):
         response = requests.get(self.url+"/getsizeinfo")
@@ -22,19 +40,36 @@ class FRCEngine:
 
 
     def step(self, action):
-        a_in = ""
-        for i in action:
-            a_in += str(float(i))+" "
-        a_in = a_in[:-1]
-        response = requests.post(self.url+"/step", json=a_in, headers=self.headers)
-        state = response.json()["Items"]
+        if self.use_shm:
+            arr = np.ndarray((4,), buffer=self.shm_in.buf)
+            arr[0] = 1
+            arr[1] = 0
+            arr[2] = action[0]
+            arr[3] = action[1]
+            state = np.ndarray((self.shm_len,), dtype=np.float32, buffer=self.shm_out.buf)
+        else:
+            a_in = ""
+            for i in action:
+                a_in += str(float(i)) + " "
+            a_in = a_in[:-1]
+            response = requests.post(self.url + "/step", json=a_in, headers=self.headers)
+            state = response.json()["Items"]
         collided, done = self.int2bool(state[10]), self.int2bool(state[11])
         return state, collided, done, (collided or done)
 
     def reset(self):
-        response = requests.post(self.url+"/reset")
-        state = response.json()["Items"]
+        if self.use_shm:
+            arr = np.ndarray((4,), buffer=self.shm_in.buf)
+            arr[0] = 0
+            arr[1] = 0
+            arr[2] = 0
+            arr[3] = 0
+            state = np.ndarray((self.shm_len,), dtype=np.float32, buffer=self.shm_out.buf)
+        else:
+            response = requests.post(self.url + "/reset")
+            state = response.json()["Items"]
         collided, done = self.int2bool(state[10]), self.int2bool(state[11])
+
         return state, collided, done, (collided or done)
 
     def crash(self):
@@ -44,6 +79,6 @@ class FRCEngine:
 if __name__ == "__main__":
     engine = FRCEngine()
     print(engine.reset())
-    simple_action = "1 1"
+    simple_action = [1,1]
     while True:
         print(engine.step(simple_action))

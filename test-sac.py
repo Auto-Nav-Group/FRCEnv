@@ -14,7 +14,7 @@ from stable_baselines3.her.her_replay_buffer import HerReplayBuffer
 th.backends.cuda.matmul.allow_tf32 = True
 th.backends.cudnn.allow_tf32 = True
 
-LEARNING_STEPS = 25000
+LEARNING_STEPS = 150000
 
 env = FRCEnv()
 

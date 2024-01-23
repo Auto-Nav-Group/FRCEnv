@@ -271,6 +271,8 @@ class SAC(OffPolicyAlgorithm):
 
             # Optimize the critic
             self.critic.optimizer.zero_grad()
+            if critic_loss.isnan().any():
+                print("Critic loss is NaN")
             self.grad_scaler.scale(critic_loss).backward()
             self.grad_scaler.step(self.critic.optimizer)
 
@@ -285,6 +287,8 @@ class SAC(OffPolicyAlgorithm):
 
             # Optimize the actor
             self.actor.optimizer.zero_grad()
+            if actor_loss.isnan().any():
+                print("Actor loss is NaN")
             self.grad_scaler.scale(actor_loss).backward()
             self.grad_scaler.step(self.actor.optimizer)
             self.grad_scaler.update()
