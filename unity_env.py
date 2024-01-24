@@ -1,5 +1,9 @@
+import asyncio
+import os
+
 import numpy as np
 import requests
+import aiohttp
 import json
 from multiprocessing import shared_memory
 
@@ -18,12 +22,13 @@ class FRCEngine:
         self.target = [0,0,0,0,0,0,0,0,0,0, 0, 0] + self.lidar_zeros
         self.int2bool = lambda x: True if x==1 else False
         self.use_shm = False
+        self.use_hybrid_shm = False
         self.mem_id_in = ""
         self.mem_id_out = ""
         self.shm_in = None
         self.shm_out = None
         self.shm_len = 112
-        if self.use_shm:
+        if self.use_shm or self.use_hybrid_shm:
             self._setup()
 
     def _setup(self):
@@ -31,8 +36,8 @@ class FRCEngine:
         j = response.json()["Items"]
         self.mem_id_in = j[0]
         self.mem_id_out = j[1]
-        self.shm_in = shared_memory.SharedMemory(name=self.mem_id_in)
-        self.shm_out = shared_memory.SharedMemory(name=self.mem_id_out)
+        self.shm_in = r'\\.\pipe{}'.format(self.mem_id_in)
+        self.shm_out = r'\\.\pipe{}'.format(self.mem_id_out)
 
     def get_size_info(self):
         response = requests.get(self.url+"/getsizeinfo")
@@ -41,12 +46,15 @@ class FRCEngine:
 
     def step(self, action):
         if self.use_shm:
-            arr = np.ndarray((4,), buffer=self.shm_in.buf)
-            arr[0] = 1
-            arr[1] = 0
-            arr[2] = action[0]
-            arr[3] = action[1]
-            state = np.ndarray((self.shm_len,), dtype=np.float32, buffer=self.shm_out.buf)
+            with open(self.shm_in, 'w') as f:
+                f.write(f"1 0 {action[0]} {action[1]}")
+            state = np.fromfile(self.shm_out, dtype=np.float32)
+        elif self.use_hybrid_shm:
+            with open(self.shm_in, 'w') as f:
+                f.write(f"1 0 {action[0]} {action[1]}")
+            with open(self.shm_out, 'r') as f:
+                state_json = f.read()
+            state = json.loads(state_json)["Items"][0]
         else:
             a_in = ""
             for i in action:
@@ -57,14 +65,15 @@ class FRCEngine:
         collided, done = self.int2bool(state[10]), self.int2bool(state[11])
         return state, collided, done, (collided or done)
 
+
     def reset(self):
         if self.use_shm:
-            arr = np.ndarray((4,), buffer=self.shm_in.buf)
-            arr[0] = 0
-            arr[1] = 0
-            arr[2] = 0
-            arr[3] = 0
-            state = np.ndarray((self.shm_len,), dtype=np.float32, buffer=self.shm_out.buf)
+            with open(self.shm_in, 'w') as f:
+                f.write("0 0 0 0")
+            state = np.fromfile(self.shm_out, dtype=np.float32)
+        elif self.use_hybrid_shm:
+            response = requests.post(self.url + "/reset")
+            state = response.json()["Items"]
         else:
             response = requests.post(self.url + "/reset")
             state = response.json()["Items"]

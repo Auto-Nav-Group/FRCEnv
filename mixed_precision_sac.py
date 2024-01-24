@@ -156,7 +156,7 @@ class SAC(OffPolicyAlgorithm):
         self.target_update_interval = target_update_interval
         self.ent_coef_optimizer: Optional[th.optim.Adam] = None
         self.use_amp = use_amp
-        self.min_scale_value = 1
+        self.min_scale_value = 100
         self.grad_scaler = th.cuda.amp.GradScaler(enabled=self.use_amp, growth_interval=100)
 
         if _init_setup_model:
